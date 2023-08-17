@@ -200,7 +200,9 @@ function App() {
             <Box
               sx={{
                 height: "100%",
-                backgroundColor: theme.palette.customTeal[800],
+                backgroundColor:
+                  theme.palette.customTeal[800] +
+                  
               }}
             ></Box>
           </MainContainer>

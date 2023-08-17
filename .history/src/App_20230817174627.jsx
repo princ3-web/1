@@ -197,12 +197,12 @@ function App() {
             </Box>
           </MainContainer>
           <MainContainer>
-            <Box
-              sx={{
-                height: "100%",
-                backgroundColor: theme.palette.customTeal[800],
-              }}
-            ></Box>
+            <Box sx={{height: "100%",  background:
+                  "linear-gradient(" +
+                  theme.palette.customTeal[800] +
+                  "," +
+                  theme.palette.customTeal[700] +
+                  ")",}}></Box>
           </MainContainer>
           <MainContainer height={"462px"}>
             <Box

@@ -196,14 +196,6 @@ function App() {
               </Box>
             </Box>
           </MainContainer>
-          <MainContainer>
-            <Box
-              sx={{
-                height: "100%",
-                backgroundColor: theme.palette.customTeal[800],
-              }}
-            ></Box>
-          </MainContainer>
           <MainContainer height={"462px"}>
             <Box
               sx={{
@@ -230,12 +222,13 @@ function App() {
                     color: grey[100],
                     background: "linear-gradient(to bottom," + teal[400] + "," + teal[600] + ")",
                     mt: 2,
-                    textTransform: "none",
+                    textTransform:"none",
                     borderRadius: 2,
-                    px: 2,
+                    
                   }}
                 >
-                  <Typography variant="subtitle1">Discover core libraries &gt; </Typography>
+                  <Typography variant="subtitle1">
+                  Discover core libraries</Typography>
                 </Button>
               </Box>
               <Box></Box>

@@ -197,50 +197,18 @@ function App() {
             </Box>
           </MainContainer>
           <MainContainer>
-            <Box
-              sx={{
-                height: "100%",
-                backgroundColor: theme.palette.customTeal[800],
-              }}
-            ></Box>
-          </MainContainer>
-          <MainContainer height={"462px"}>
-            <Box
-              sx={{
-                height: "100%",
-                background:
-                  "linear-gradient(" +
-                  theme.palette.customTeal[800] +
-                  "," +
-                  theme.palette.customTeal[700] +
-                  ")",
-              }}
-            >
-              <Box sx={{ boxSizing: "border-box", pl: "180px", pt: "100px", width: "50vw" }}>
-                <Typography sx={{ color: teal[500], fontWeight: 600, mb: 1 }}>Start now</Typography>
-                <Typography variant="h4" sx={{ color: grey[200], fontWeight: 600 }}>
-                  Ship your next project faster
-                </Typography>
-                <Typography sx={{ color: grey[500], mt: 1 }}>
-                  Find out why MUI's tools are trusted by thousands of open-source developers and
-                  teams around the world.
-                </Typography>
-                <Button
-                  sx={{
-                    color: grey[100],
-                    background: "linear-gradient(to bottom," + teal[400] + "," + teal[600] + ")",
-                    mt: 2,
-                    textTransform: "none",
-                    borderRadius: 2,
-                    px: 2,
-                  }}
-                >
-                  <Typography variant="subtitle1">Discover core libraries &gt; </Typography>
-                </Button>
-              </Box>
-              <Box></Box>
+            <Box sx==>
+              <Typography>Start now</Typography>
+              <Typography>Ship your next project faster</Typography>
+              <Typography>
+                Find out why MUI's tools are trusted by thousands of open-source developers and
+                teams around the world.
+              </Typography>
+              <Button>Discover core libraries</Button>
             </Box>
+            <Box></Box>
           </MainContainer>
+          <MainContainer />
           <Bottombar />
         </ThemeProvider>
       </LocalizationProvider>
