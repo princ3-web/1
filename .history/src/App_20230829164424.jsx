@@ -21,7 +21,6 @@ import mui from "../src/assets/icons/mui.png";
 import more from "../src/assets/icons/more.png";
 import vscode from "../src/assets/icons/vscode.png";
 import photoshop from "../src/assets/icons/photoshop.png";
-import mainImage from "../src/assets/images/main.png";
 
 const App = () => {
   return (
@@ -389,6 +388,7 @@ const ContactContainer = () => {
       <Box
         sx={{
           height: "100%",
+          border: ""
           background:
             "linear-gradient(" +
             theme.palette.customTeal[800] +
@@ -421,22 +421,7 @@ const ContactContainer = () => {
             <Typography variant="subtitle1">Send an email &gt; </Typography>
           </Button>
         </Box>
-        <Box
-          sx={{
-            position: "absolute",
-            height: "350px",
-            width: "350px",
-            right: "238px",
-            bottom: "50px",
-          }}
-        >
-          <CardMedia
-            component="img"
-            image={mainImage}
-            alt="Sample Image"
-            sx={{ objectFit: "cover" }}
-          />
-        </Box>
+        <Box></Box>
       </Box>
     </MainContainer>
   );

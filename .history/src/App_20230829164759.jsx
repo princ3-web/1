@@ -21,7 +21,7 @@ import mui from "../src/assets/icons/mui.png";
 import more from "../src/assets/icons/more.png";
 import vscode from "../src/assets/icons/vscode.png";
 import photoshop from "../src/assets/icons/photoshop.png";
-import mainImage from "../src/assets/images/main.png";
+import mainImage from "../src/assets/images/main.jpg";
 
 const App = () => {
   return (
@@ -421,20 +421,12 @@ const ContactContainer = () => {
             <Typography variant="subtitle1">Send an email &gt; </Typography>
           </Button>
         </Box>
-        <Box
-          sx={{
-            position: "absolute",
-            height: "350px",
-            width: "350px",
-            right: "238px",
-            bottom: "50px",
-          }}
-        >
+        <Box sx={{position:"absolute", height: "400px", width: "400px", right: "5"}}>
           <CardMedia
             component="img"
             image={mainImage}
             alt="Sample Image"
-            sx={{ objectFit: "cover" }}
+            sx={{ objectFit: "contain", mx: 2 }}
           />
         </Box>
       </Box>

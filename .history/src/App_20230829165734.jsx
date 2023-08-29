@@ -424,10 +424,10 @@ const ContactContainer = () => {
         <Box
           sx={{
             position: "absolute",
-            height: "350px",
-            width: "350px",
+            height: "400px",
+            width: "400px",
             right: "238px",
-            bottom: "50px",
+            bottom: "20px",
           }}
         >
           <CardMedia

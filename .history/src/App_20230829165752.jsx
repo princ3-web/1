@@ -427,7 +427,7 @@ const ContactContainer = () => {
             height: "350px",
             width: "350px",
             right: "238px",
-            bottom: "50px",
+            bottom: "20px",
           }}
         >
           <CardMedia
