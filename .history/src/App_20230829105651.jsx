@@ -12,6 +12,7 @@ import InfoBox from "./components/InfoBox";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import { useTheme } from "@mui/material";
 import { CardMedia } from "@mui/material";
+import gif0 from "../src/assets/icons/0.gif";
 import image0 from "../src/assets/images/0.png";
 import image1 from "../src/assets/images/1.png";
 import image2 from "../src/assets/images/2.png";
@@ -185,7 +186,7 @@ const DemosContainer = () => {
               <Box sx={{ m: 2 }}>
                 <GitHubIcon sx={{ fontSize: 40, color: teal[500] }} />
               </Box>
-              <Box sx={{ mr: "10px" }}>
+              <Box sx={{mr: "10px"}}>
                 <Typography sx={{ color: grey[100], fontWeight: 600 }} variant="subtitle2">
                   {item.title}
                 </Typography>
@@ -383,6 +384,17 @@ const SkillsContainer = () => {
 const ContactContainer = () => {
   const theme = useTheme();
 
+  const sendEmail = () => {
+    const emailData = {
+      to: 'recipient@example.com',
+      subject: 'Hello from Material-UI',
+      body: 'This is the email body.',
+    };
+  
+    const emailUrl = `mailto:${emailData.to}?subject=${encodeURIComponent(emailData.subject)}&body=${encodeURIComponent(emailData.body)}`;
+    window.location.href = emailUrl;
+  };
+
   return (
     <MainContainer height={"462px"}>
       <Box
@@ -404,10 +416,10 @@ const ContactContainer = () => {
           <Typography sx={{ color: grey[500], mt: 1 }}>
             We're excited to discuss your project, drop us a message to get started
           </Typography>
-
+          
           <Button
-            href="mailto:mypixelwizard@gmail.com"
-            target="_blank"
+          href="mailto:gornmich@gmail.com"
+          target="_blank" 
             sx={{
               color: grey[100],
               background: "linear-gradient(to bottom," + teal[400] + "," + teal[600] + ")",

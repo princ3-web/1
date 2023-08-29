@@ -406,7 +406,7 @@ const ContactContainer = () => {
           </Typography>
 
           <Button
-            href="mailto:mypixelwizard@gmail.com"
+            href="mailto:mypixel@gmail.com"
             target="_blank"
             sx={{
               color: grey[100],

@@ -383,6 +383,8 @@ const SkillsContainer = () => {
 const ContactContainer = () => {
   const theme = useTheme();
 
+
+
   return (
     <MainContainer height={"462px"}>
       <Box
@@ -406,7 +408,7 @@ const ContactContainer = () => {
           </Typography>
 
           <Button
-            href="mailto:mypixelwizard@gmail.com"
+            href="mailto:gornmich@gmail.com"
             target="_blank"
             sx={{
               color: grey[100],

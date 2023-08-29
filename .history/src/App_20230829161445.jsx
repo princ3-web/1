@@ -383,6 +383,19 @@ const SkillsContainer = () => {
 const ContactContainer = () => {
   const theme = useTheme();
 
+  const sendEmail = () => {
+    const emailData = {
+      to: "recipient@example.com",
+      subject: "Hello from Material-UI",
+      body: "This is the email body.",
+    };
+
+    const emailUrl = `mailto:${emailData.to}?subject=${encodeURIComponent(
+      emailData.subject
+    )}&body=${encodeURIComponent(emailData.body)}`;
+    window.location.href = emailUrl;
+  };
+
   return (
     <MainContainer height={"462px"}>
       <Box
@@ -406,7 +419,7 @@ const ContactContainer = () => {
           </Typography>
 
           <Button
-            href="mailto:mypixelwizard@gmail.com"
+            href="mailto:gornmich@gmail.com"
             target="_blank"
             sx={{
               color: grey[100],
