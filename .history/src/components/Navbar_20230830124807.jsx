@@ -5,24 +5,25 @@ import logo from "../assets/icons/logo.png";
 import { CardMedia } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import SettingsIcon from "@mui/icons-material/Settings";
-import { useTheme } from "@mui/material/styles";
+import { useTheme } from '@mui/material/styles';
 
-const Navbar = ({ isMobile }) => {
+const Navbar = ({isMobile}) => {
+
   const theme = useTheme();
 
   const items = ["start", "experience", "skills", "demos", "contact"];
 
   return (
     <>
-      <Box
-        sx={{
-          position: "absolute",
-          width: "100vw",
-          height: "59px",
-          backgroundColor: theme.palette.customTeal[900],
-          zIndex: 1,
-        }}
-      ></Box>
+    <Box sx={{
+      position: "absolute",
+      width: "100vw",
+      height: "59px",
+      backgroundColor: theme.palette.customTeal[900],
+      zIndex: 1
+    }}>
+
+    </Box>
       <Box
         sx={{
           position: "fixed",
@@ -37,29 +38,19 @@ const Navbar = ({ isMobile }) => {
           pl: isMobile ? "40px" : "175px",
           pr: isMobile ? "40px" : "180px",
           zIndex: 1,
-          backdropFilter: "blur(5px)",
+          backdropFilter:"blur(5px)",
         }}
       >
-        <Box sx={{ display: "flex" }}>
+        <Box sx={{ display:  "flex"  }}>
           <CardMedia
             component="img"
             image={logo}
             alt="Sample Image"
-            sx={{
-              position: isMobile ? "absolute" : "relative",
-              left: isMobile ? "20px" : "none",
-              top: isMobile ? "50%" : "none",
-              translate: isMobile ? "0% -50%" : "none",
-              height: "35px",
-              objectFit: "contain",
-              width: "35px",
-              mr: 2,
-            }}
+            sx={{ height: "35px", objectFit: "contain", width: "35px", mr: 2 }}
           />
           {items.map((item) => (
             <Box
               sx={{
-                display: isMobile ? "none" : "flex",
                 p: "8px",
                 cursor: "pointer",
                 borderRadius: 2,
@@ -80,8 +71,8 @@ const Navbar = ({ isMobile }) => {
             </Box>
           ))}
         </Box>
-
-        <Box sx={{ display: "flex" }}>
+          
+        <Box sx={{ display: "flex"}}>
           <Box
             sx={{
               display: "flex",
@@ -97,7 +88,7 @@ const Navbar = ({ isMobile }) => {
               },
             }}
           >
-            <GitHubIcon sx={{ color: teal[400], fontSize: isMobile ? 30 : 30 }} />
+            <GitHubIcon sx={{ color: teal[400], fontSize: isMobile ? 30 : 20 }} />
           </Box>
           <Box
             sx={{
@@ -113,7 +104,7 @@ const Navbar = ({ isMobile }) => {
               cursor: "pointer",
             }}
           >
-            <SettingsIcon sx={{ color: teal[400], fontSize: isMobile ? 30 : 30 }} />
+            <SettingsIcon sx={{ color: teal[400], fontSize: isMobile ? 30 : 20 }} />
           </Box>
         </Box>
       </Box>

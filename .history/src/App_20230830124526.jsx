@@ -293,6 +293,7 @@ const SkillsContainer = ({ isMobile }) => {
             boxSizing: "border-box",
             pl: isMobile ? "30px" : "180px",
             pr: isMobile ? "30px" : "0px",
+
             pt: "116px",
             width: "773px",
           }}

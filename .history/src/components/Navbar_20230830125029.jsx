@@ -47,9 +47,9 @@ const Navbar = ({ isMobile }) => {
             alt="Sample Image"
             sx={{
               position: isMobile ? "absolute" : "relative",
-              left: isMobile ? "20px" : "none",
-              top: isMobile ? "50%" : "none",
-              translate: isMobile ? "0% -50%" : "none",
+              left: "20px",
+              top: "50%",
+              translate: "0% -50%",
               height: "35px",
               objectFit: "contain",
               width: "35px",
@@ -97,7 +97,7 @@ const Navbar = ({ isMobile }) => {
               },
             }}
           >
-            <GitHubIcon sx={{ color: teal[400], fontSize: isMobile ? 30 : 30 }} />
+            <GitHubIcon sx={{ color: teal[400], fontSize: isMobile ? 30 : 20 }} />
           </Box>
           <Box
             sx={{
@@ -113,7 +113,7 @@ const Navbar = ({ isMobile }) => {
               cursor: "pointer",
             }}
           >
-            <SettingsIcon sx={{ color: teal[400], fontSize: isMobile ? 30 : 30 }} />
+            <SettingsIcon sx={{ color: teal[400], fontSize: isMobile ? 30 : 20 }} />
           </Box>
         </Box>
       </Box>

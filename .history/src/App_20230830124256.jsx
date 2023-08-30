@@ -50,7 +50,7 @@ const StartContainer = ({ isMobile }) => {
   ];
   const theme = useTheme();
   return (
-    <MainContainer height={ "684px"}>
+    <MainContainer height={ isMobile ? "684px" : "684px"}>
       <Box
         sx={{
           display: "flex",
@@ -66,7 +66,7 @@ const StartContainer = ({ isMobile }) => {
             height: "100%",
             pl: isMobile ? "30px" : "180px",
             pr: isMobile ? "30px" : "124px",
-            pt: "136px",
+            pt: isMobile ? "136px",
           }}
         >
           <Box sx={{ display: "flex", alignItems: "center" }}>
@@ -132,7 +132,6 @@ const DemosContainer = ({ isMobile }) => {
           display: "flex",
           position: "relative",
           height: "100%",
-          pb: isMobile ? "40px" : 0,
           background:
             "linear-gradient(" +
             theme.palette.customTeal[800] +
@@ -285,14 +284,12 @@ const SkillsContainer = ({ isMobile }) => {
           display: "flex",
           height: "100%",
           backgroundColor: theme.palette.customTeal[800],
-          pb: isMobile ? "40px" : 0,
         }}
       >
         <Box
           sx={{
             boxSizing: "border-box",
             pl: isMobile ? "30px" : "180px",
-            pr: isMobile ? "30px" : "0px",
             pt: "116px",
             width: "773px",
           }}
@@ -394,7 +391,7 @@ const ContactContainer = ({ isMobile }) => {
   const theme = useTheme();
 
   return (
-    <MainContainer height={ "462px"}>
+    <MainContainer height={ isMobile ? "auto" : "462px"}>
       <Box
         sx={{
           height: "100%",
@@ -410,7 +407,6 @@ const ContactContainer = ({ isMobile }) => {
           sx={{
             boxSizing: "border-box",
             pl: isMobile ? "30px" : "180px",
-            pr: isMobile ? "30px" : "0px",
             pt: isMobile ? "30px" : "100px",
             width: isMobile ? "100vw" : "50vw",
             boxSizing: "border-box",

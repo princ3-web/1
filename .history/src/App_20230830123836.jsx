@@ -50,7 +50,7 @@ const StartContainer = ({ isMobile }) => {
   ];
   const theme = useTheme();
   return (
-    <MainContainer height={ "684px"}>
+    <MainContainer height={"684px"}>
       <Box
         sx={{
           display: "flex",
@@ -126,13 +126,12 @@ const DemosContainer = ({ isMobile }) => {
   const [selectedItem, setSelectedItem] = useState(0);
 
   return (
-    <MainContainer height={ isMobile ? "auto" : "954px"}>
+    <MainContainer>
       <Box
         sx={{
           display: "flex",
           position: "relative",
           height: "100%",
-          pb: isMobile ? "40px" : 0,
           background:
             "linear-gradient(" +
             theme.palette.customTeal[800] +
@@ -279,24 +278,15 @@ const SkillsContainer = ({ isMobile }) => {
   const [selectedItem, setSelectedItem] = useState(0);
 
   return (
-    <MainContainer height={ isMobile ? "auto" : "954px"}>
+    <MainContainer>
       <Box
         sx={{
           display: "flex",
           height: "100%",
           backgroundColor: theme.palette.customTeal[800],
-          pb: isMobile ? "40px" : 0,
         }}
       >
-        <Box
-          sx={{
-            boxSizing: "border-box",
-            pl: isMobile ? "30px" : "180px",
-            pr: isMobile ? "30px" : "0px",
-            pt: "116px",
-            width: "773px",
-          }}
-        >
+        <Box sx={{ boxSizing: "border-box", pl: isMobile ? "30px" : "180px", pt: "116px", width: "773px" }}>
           <Box>
             <Typography sx={{ color: teal[500], fontWeight: 600, mb: 1 }}>
               Spectrum of possibilities
@@ -394,7 +384,7 @@ const ContactContainer = ({ isMobile }) => {
   const theme = useTheme();
 
   return (
-    <MainContainer height={ "462px"}>
+    <MainContainer height={"462px"}>
       <Box
         sx={{
           height: "100%",
@@ -410,10 +400,9 @@ const ContactContainer = ({ isMobile }) => {
           sx={{
             boxSizing: "border-box",
             pl: isMobile ? "30px" : "180px",
-            pr: isMobile ? "30px" : "0px",
             pt: isMobile ? "30px" : "100px",
             width: isMobile ? "100vw" : "50vw",
-            boxSizing: "border-box",
+            boxSizing:"border-box"
           }}
         >
           <Typography sx={{ color: teal[500], fontWeight: 600, mb: 1 }}>Start now</Typography>

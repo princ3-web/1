@@ -41,7 +41,7 @@ const Bottombar = ({isMobile}) => {
               component="img"
               image={item}
               alt="Sample Image"
-              sx={{ height: isMobile ? "30px" : "30px", width: isMobile ? "30px" : "30px", objectFit: "contain" }}
+              sx={{ height: isMobile ? "30px" : "25px", width: isMobile ? "30px" : "25px", objectFit: "contain" }}
             />
           </Box>
         ))}

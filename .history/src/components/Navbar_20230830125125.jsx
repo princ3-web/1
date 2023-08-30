@@ -97,7 +97,7 @@ const Navbar = ({ isMobile }) => {
               },
             }}
           >
-            <GitHubIcon sx={{ color: teal[400], fontSize: isMobile ? 30 : 30 }} />
+            <GitHubIcon sx={{ color: teal[400], fontSize: isMobile ? 30 : 20 }} />
           </Box>
           <Box
             sx={{

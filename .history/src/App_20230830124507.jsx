@@ -292,7 +292,6 @@ const SkillsContainer = ({ isMobile }) => {
           sx={{
             boxSizing: "border-box",
             pl: isMobile ? "30px" : "180px",
-            pr: isMobile ? "30px" : "0px",
             pt: "116px",
             width: "773px",
           }}
@@ -410,7 +409,7 @@ const ContactContainer = ({ isMobile }) => {
           sx={{
             boxSizing: "border-box",
             pl: isMobile ? "30px" : "180px",
-            pr: isMobile ? "30px" : "0px",
+            pl: isMobile ? "30px" : "180px",
             pt: isMobile ? "30px" : "100px",
             width: isMobile ? "100vw" : "50vw",
             boxSizing: "border-box",

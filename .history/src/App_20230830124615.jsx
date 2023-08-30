@@ -65,7 +65,7 @@ const StartContainer = ({ isMobile }) => {
             width: isMobile ? "100vw" : "773px",
             height: "100%",
             pl: isMobile ? "30px" : "180px",
-            pr: isMobile ? "30px" : "124px",
+            pr: isMobile ? "px" : "124px",
             pt: "136px",
           }}
         >
