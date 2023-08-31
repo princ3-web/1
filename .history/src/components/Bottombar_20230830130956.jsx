@@ -1,19 +1,14 @@
 import React from "react";
-import { Box, Button, Link, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { grey, blueGrey, blue, teal } from "@mui/material/colors";
 import github from "../assets/icons/github1.png";
 import tiktok from "../assets/icons/tiktok.png";
 import linkedin from "../assets/icons/linkedin.png";
 import discord from "../assets/icons/discord.png";
-import { CardMedia } from "@mui/material";
+import {CardMedia} from "@mui/material";
 
-const Bottombar = ({ isMobile }) => {
-  const icons = [
-    { icon: github },
-    { icon: tiktok, link: "https://www.tiktok.com/@mypixelwizard" },
-    { icon: linkedin },
-    { icon: discord, link: "http://www.discord.com/users/696096824301453412" },
-  ];
+const Bottombar = ({isMobile}) => {
+  const icons = [github, tiktok, linkedin, discord];
   return (
     <Box
       sx={{
@@ -41,19 +36,13 @@ const Bottombar = ({ isMobile }) => {
                 backgroundColor: blueGrey[800],
               },
             }}
-          >
-            <Link href={item.link}>
+          >discord.com/users/696096824301453412
             <CardMedia
               component="img"
-              image={item.icon}
+              image={item}
               alt="Sample Image"
-              sx={{
-                height: isMobile ? "30px" : "30px",
-                width: isMobile ? "30px" : "30px",
-                objectFit: "contain",
-              }}
+              sx={{ height: isMobile ? "30px" : "30px", width: isMobile ? "30px" : "30px", objectFit: "contain" }}
             />
-            </Link>
           </Box>
         ))}
       </Box>

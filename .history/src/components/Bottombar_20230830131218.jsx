@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Link, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { grey, blueGrey, blue, teal } from "@mui/material/colors";
 import github from "../assets/icons/github1.png";
 import tiktok from "../assets/icons/tiktok.png";
@@ -10,7 +10,7 @@ import { CardMedia } from "@mui/material";
 const Bottombar = ({ isMobile }) => {
   const icons = [
     { icon: github },
-    { icon: tiktok, link: "https://www.tiktok.com/@mypixelwizard" },
+    { icon: tiktok },
     { icon: linkedin },
     { icon: discord, link: "http://www.discord.com/users/696096824301453412" },
   ];
@@ -42,7 +42,7 @@ const Bottombar = ({ isMobile }) => {
               },
             }}
           >
-            <Link href={item.link}>
+            
             <CardMedia
               component="img"
               image={item.icon}
@@ -53,7 +53,6 @@ const Bottombar = ({ isMobile }) => {
                 objectFit: "contain",
               }}
             />
-            </Link>
           </Box>
         ))}
       </Box>

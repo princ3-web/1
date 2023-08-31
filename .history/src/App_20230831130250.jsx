@@ -401,8 +401,6 @@ const ContactContainer = ({ isMobile }) => {
     <MainContainer height={ "462px"}>
       <Box
         sx={{
-          justifyContent:"center",
-
           height: "100%",
           background:
             "linear-gradient(" +

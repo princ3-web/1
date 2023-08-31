@@ -132,6 +132,7 @@ const DemosContainer = ({ isMobile }) => {
         sx={{
           display: "flex",
           justifyContent:"center",
+
           position: "relative",
           height: "100%",
           pb: isMobile ? "40px" : 0,
@@ -285,8 +286,6 @@ const SkillsContainer = ({ isMobile }) => {
       <Box
         sx={{
           display: "flex",
-          justifyContent:"center",
-
           height: "100%",
           backgroundColor: theme.palette.customTeal[800],
           pb: isMobile ? "40px" : 0,
@@ -401,8 +400,6 @@ const ContactContainer = ({ isMobile }) => {
     <MainContainer height={ "462px"}>
       <Box
         sx={{
-          justifyContent:"center",
-
           height: "100%",
           background:
             "linear-gradient(" +

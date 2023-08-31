@@ -10,7 +10,7 @@ import { CardMedia } from "@mui/material";
 const Bottombar = ({ isMobile }) => {
   const icons = [
     { icon: github },
-    { icon: tiktok, link: "https://www.tiktok.com/@mypixelwizard" },
+    { icon: tiktok },
     { icon: linkedin },
     { icon: discord, link: "http://www.discord.com/users/696096824301453412" },
   ];
@@ -42,7 +42,7 @@ const Bottombar = ({ isMobile }) => {
               },
             }}
           >
-            <Link href={item.link}>
+            <Link to>
             <CardMedia
               component="img"
               image={item.icon}
