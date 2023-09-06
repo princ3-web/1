@@ -15,7 +15,6 @@ import { CardMedia } from "@mui/material";
 import image0 from "../src/assets/images/0.png";
 import image1 from "../src/assets/images/1.png";
 import image2 from "../src/assets/images/2.png";
-import image3 from "../src/assets/images/3.png";
 import github from "../src/assets/icons/github.png";
 import react from "../src/assets/icons/react.png";
 import mui from "../src/assets/icons/mui.png";
@@ -24,7 +23,6 @@ import vscode from "../src/assets/icons/vscode.png";
 import photoshop from "../src/assets/icons/photoshop.png";
 import mainImage from "../src/assets/images/main.png";
 import { useMediaQuery } from "@material-ui/core";
-import {Link} from "@mui/material";
 
 const App = () => {
   const isMobile = useMediaQuery("(max-width: 700px)");
@@ -52,11 +50,11 @@ const StartContainer = ({ isMobile }) => {
   ];
   const theme = useTheme();
   return (
-    <MainContainer height={"684px"}>
+    <MainContainer height={ "684px"}>
       <Box
         sx={{
           display: "flex",
-          justifyContent: "center",
+          justifyContent:"center",
           position: "relative",
           height: "100%",
           backgroundColor: theme.palette.customTeal[800],
@@ -110,40 +108,30 @@ const DemosContainer = ({ isMobile }) => {
 
   const items = [
     {
-      title: "Steam clone",
-      text: "Precise clone of popular digital distribution website.",
+      title: "Academy",
+      text: "Online academy website seamlessly blending aesthetic appeal with user-friendly functionality.",
       image: image0,
-      link: "https://princ3-web.github.io/steamclone/",
     },
     {
       title: "Design software",
-      text: "A design software website with intuitive navigation and an aesthetically pleasing interface.",
+      text: "A design software website was established, placing emphasis on intuitive navigation and an aesthetically pleasing interface to ensure a smooth and engaging user experience.",
       image: image1,
-      link: "https://princ3-web.github.io/designstudio/",
     },
-    {
-      title: "Academy",
-      text: "Online academy website seamlessly blending aesthetic appeal with user-friendly functionality.",
-      image: image2,
-      link: "https://princ3-web.github.io/academy/",
-    },
-
     {
       title: "Tik-tok style app",
       text: "TikTok-style app with a captivating design and seamless user interactions.",
-      image: image3,
-      link: "https://princ3-web.github.io/quicktok/",
+      image: image2,
     },
   ];
 
   const [selectedItem, setSelectedItem] = useState(0);
 
   return (
-    <MainContainer height={isMobile ? "auto" : "954px"}>
+    <MainContainer height={ isMobile ? "auto" : "954px"}>
       <Box
         sx={{
           display: "flex",
-          justifyContent: "center",
+          justifyContent:"center",
           position: "relative",
           height: "100%",
           pb: isMobile ? "40px" : 0,
@@ -180,38 +168,36 @@ const DemosContainer = ({ isMobile }) => {
             </Typography>
           </Box>
           {items.map((item, n) => (
-            <Link href={item.link} sx={{textDecoration:"none"}}>
-              <Box
-                onMouseOver={() => setSelectedItem(n)}
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  mt: 2,
-                  py: 1,
-                  borderRadius: 2,
-                  cursor: "pointer",
-                  backgroundColor: selectedItem === n ? teal[900] + 30 : "none",
-                  outline:
-                    selectedItem === n ? "2px solid" + teal[500] : "2px solid" + teal[500] + "20",
-                  transition: "0.2s",
-                }}
-              >
-                <Box sx={{ m: 2 }}>
-                  <GitHubIcon sx={{ fontSize: 40, color: teal[500] }} />
-                </Box>
-                <Box sx={{ mr: "10px" }}>
-                  <Typography sx={{ color: grey[100], fontWeight: 600 }} variant="subtitle2">
-                    {item.title}
-                  </Typography>
-                  <Typography sx={{ color: grey[500] }} variant="subtitle2">
-                    {item.text}
-                  </Typography>
-                  <Typography sx={{ color: teal[400], fontWeight: 600 }} variant="subtitle2">
-                    Learn more
-                  </Typography>
-                </Box>
+            <Box
+              onMouseOver={() => setSelectedItem(n)}
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                mt: 4,
+                py: 2,
+                borderRadius: 2,
+                cursor: "pointer",
+                backgroundColor: selectedItem === n ? teal[900] + 30 : "none",
+                outline:
+                  selectedItem === n ? "2px solid" + teal[500] : "2px solid" + teal[500] + "20",
+                transition: "0.2s",
+              }}
+            >
+              <Box sx={{ m: 2 }}>
+                <GitHubIcon sx={{ fontSize: 40, color: teal[500] }} />
               </Box>
-            </Link>
+              <Box sx={{ mr: "10px" }}>
+                <Typography sx={{ color: grey[100], fontWeight: 600 }} variant="subtitle2">
+                  {item.title}
+                </Typography>
+                <Typography sx={{ color: grey[500] }} variant="subtitle2">
+                  {item.text}
+                </Typography>
+                <Typography sx={{ color: teal[400], fontWeight: 600 }} variant="subtitle2">
+                  Learn more
+                </Typography>
+              </Box>
+            </Box>
           ))}
         </Box>
         <Box
@@ -295,11 +281,11 @@ const SkillsContainer = ({ isMobile }) => {
   const [selectedItem, setSelectedItem] = useState(0);
 
   return (
-    <MainContainer height={isMobile ? "auto" : "954px"}>
+    <MainContainer height={ isMobile ? "auto" : "954px"}>
       <Box
         sx={{
           display: "flex",
-          justifyContent: "center",
+          justifyContent:"center",
 
           height: "100%",
           backgroundColor: theme.palette.customTeal[800],
@@ -412,10 +398,10 @@ const ContactContainer = ({ isMobile }) => {
   const theme = useTheme();
 
   return (
-    <MainContainer height={"462px"}>
+    <MainContainer height={ "462px"}>
       <Box
         sx={{
-          justifyContent: "center",
+          justifyContent:"center",
 
           height: "100%",
           background:

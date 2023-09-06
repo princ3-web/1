@@ -24,7 +24,6 @@ import vscode from "../src/assets/icons/vscode.png";
 import photoshop from "../src/assets/icons/photoshop.png";
 import mainImage from "../src/assets/images/main.png";
 import { useMediaQuery } from "@material-ui/core";
-import {Link} from "@mui/material";
 
 const App = () => {
   const isMobile = useMediaQuery("(max-width: 700px)");
@@ -113,26 +112,26 @@ const DemosContainer = ({ isMobile }) => {
       title: "Steam clone",
       text: "Precise clone of popular digital distribution website.",
       image: image0,
-      link: "https://princ3-web.github.io/steamclone/",
+      link: "https://princ3-web.github.io/steamclone/"
     },
     {
       title: "Design software",
       text: "A design software website with intuitive navigation and an aesthetically pleasing interface.",
       image: image1,
-      link: "https://princ3-web.github.io/designstudio/",
+      link: "https://princ3-web.github.io/designstudio/"
     },
     {
       title: "Academy",
       text: "Online academy website seamlessly blending aesthetic appeal with user-friendly functionality.",
       image: image2,
-      link: "https://princ3-web.github.io/academy/",
+      link: "https://princ3-web.github.io/academy/"
     },
 
     {
       title: "Tik-tok style app",
       text: "TikTok-style app with a captivating design and seamless user interactions.",
       image: image3,
-      link: "https://princ3-web.github.io/quicktok/",
+      link: "https://princ3-web.github.io/steamclone/"
     },
   ];
 
@@ -180,38 +179,36 @@ const DemosContainer = ({ isMobile }) => {
             </Typography>
           </Box>
           {items.map((item, n) => (
-            <Link href={item.link} sx={{textDecoration:"none"}}>
-              <Box
-                onMouseOver={() => setSelectedItem(n)}
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  mt: 2,
-                  py: 1,
-                  borderRadius: 2,
-                  cursor: "pointer",
-                  backgroundColor: selectedItem === n ? teal[900] + 30 : "none",
-                  outline:
-                    selectedItem === n ? "2px solid" + teal[500] : "2px solid" + teal[500] + "20",
-                  transition: "0.2s",
-                }}
-              >
-                <Box sx={{ m: 2 }}>
-                  <GitHubIcon sx={{ fontSize: 40, color: teal[500] }} />
-                </Box>
-                <Box sx={{ mr: "10px" }}>
-                  <Typography sx={{ color: grey[100], fontWeight: 600 }} variant="subtitle2">
-                    {item.title}
-                  </Typography>
-                  <Typography sx={{ color: grey[500] }} variant="subtitle2">
-                    {item.text}
-                  </Typography>
-                  <Typography sx={{ color: teal[400], fontWeight: 600 }} variant="subtitle2">
-                    Learn more
-                  </Typography>
-                </Box>
+            <Box
+              onMouseOver={() => setSelectedItem(n)}
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                mt: 2,
+                py: 1,
+                borderRadius: 2,
+                cursor: "pointer",
+                backgroundColor: selectedItem === n ? teal[900] + 30 : "none",
+                outline:
+                  selectedItem === n ? "2px solid" + teal[500] : "2px solid" + teal[500] + "20",
+                transition: "0.2s",
+              }}
+            >
+              <Box sx={{ m: 2 }}>
+                <GitHubIcon sx={{ fontSize: 40, color: teal[500] }} />
               </Box>
-            </Link>
+              <Box sx={{ mr: "10px" }}>
+                <Typography sx={{ color: grey[100], fontWeight: 600 }} variant="subtitle2">
+                  {item.title}
+                </Typography>
+                <Typography sx={{ color: grey[500] }} variant="subtitle2">
+                  {item.text}
+                </Typography>
+                <Typography sx={{ color: teal[400], fontWeight: 600 }} variant="subtitle2">
+                  Learn more
+                </Typography>
+              </Box>
+            </Box>
           ))}
         </Box>
         <Box

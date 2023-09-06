@@ -180,7 +180,7 @@ const DemosContainer = ({ isMobile }) => {
             </Typography>
           </Box>
           {items.map((item, n) => (
-            <Link href={item.link} sx={{textDecoration:"none"}}>
+            <Link href={item.link} sx={{textDecoration:"non"}}>
               <Box
                 onMouseOver={() => setSelectedItem(n)}
                 sx={{

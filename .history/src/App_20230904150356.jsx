@@ -24,7 +24,7 @@ import vscode from "../src/assets/icons/vscode.png";
 import photoshop from "../src/assets/icons/photoshop.png";
 import mainImage from "../src/assets/images/main.png";
 import { useMediaQuery } from "@material-ui/core";
-import {Link} from "@mui/material";
+import Link from "@mui/material";
 
 const App = () => {
   const isMobile = useMediaQuery("(max-width: 700px)");
@@ -180,7 +180,7 @@ const DemosContainer = ({ isMobile }) => {
             </Typography>
           </Box>
           {items.map((item, n) => (
-            <Link href={item.link} sx={{textDecoration:"none"}}>
+            <Link href={item.link}>
               <Box
                 onMouseOver={() => setSelectedItem(n)}
                 sx={{

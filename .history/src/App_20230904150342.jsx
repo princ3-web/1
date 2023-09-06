@@ -24,7 +24,7 @@ import vscode from "../src/assets/icons/vscode.png";
 import photoshop from "../src/assets/icons/photoshop.png";
 import mainImage from "../src/assets/images/main.png";
 import { useMediaQuery } from "@material-ui/core";
-import {Link} from "@mui/material";
+import Link from "@mui/material";
 
 const App = () => {
   const isMobile = useMediaQuery("(max-width: 700px)");
@@ -180,38 +180,38 @@ const DemosContainer = ({ isMobile }) => {
             </Typography>
           </Box>
           {items.map((item, n) => (
-            <Link href={item.link} sx={{textDecoration:"none"}}>
-              <Box
-                onMouseOver={() => setSelectedItem(n)}
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  mt: 2,
-                  py: 1,
-                  borderRadius: 2,
-                  cursor: "pointer",
-                  backgroundColor: selectedItem === n ? teal[900] + 30 : "none",
-                  outline:
-                    selectedItem === n ? "2px solid" + teal[500] : "2px solid" + teal[500] + "20",
-                  transition: "0.2s",
-                }}
-              >
-                <Box sx={{ m: 2 }}>
-                  <GitHubIcon sx={{ fontSize: 40, color: teal[500] }} />
-                </Box>
-                <Box sx={{ mr: "10px" }}>
-                  <Typography sx={{ color: grey[100], fontWeight: 600 }} variant="subtitle2">
-                    {item.title}
-                  </Typography>
-                  <Typography sx={{ color: grey[500] }} variant="subtitle2">
-                    {item.text}
-                  </Typography>
-                  <Typography sx={{ color: teal[400], fontWeight: 600 }} variant="subtitle2">
-                    Learn more
-                  </Typography>
-                </Box>
+            
+            <Box
+              href={item.link}
+              onMouseOver={() => setSelectedItem(n)}
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                mt: 2,
+                py: 1,
+                borderRadius: 2,
+                cursor: "pointer",
+                backgroundColor: selectedItem === n ? teal[900] + 30 : "none",
+                outline:
+                  selectedItem === n ? "2px solid" + teal[500] : "2px solid" + teal[500] + "20",
+                transition: "0.2s",
+              }}
+            >
+              <Box sx={{ m: 2 }}>
+                <GitHubIcon sx={{ fontSize: 40, color: teal[500] }} />
               </Box>
-            </Link>
+              <Box sx={{ mr: "10px" }}>
+                <Typography sx={{ color: grey[100], fontWeight: 600 }} variant="subtitle2">
+                  {item.title}
+                </Typography>
+                <Typography sx={{ color: grey[500] }} variant="subtitle2">
+                  {item.text}
+                </Typography>
+                <Typography sx={{ color: teal[400], fontWeight: 600 }} variant="subtitle2">
+                  Learn more
+                </Typography>
+              </Box>
+            </Box>
           ))}
         </Box>
         <Box
