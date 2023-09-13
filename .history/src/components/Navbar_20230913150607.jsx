@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Typography, Link } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { grey, blueGrey, blue, teal } from "@mui/material/colors";
 import logo from "../assets/icons/logo.png";
 import { CardMedia } from "@mui/material";
@@ -97,8 +97,8 @@ const Navbar = ({ isMobile }) => {
               },
             }}
           >
-            <Link href={"https://github.com/princ3-web"}>
-              <GitHubIcon sx={{ color: teal[400], fontSize: isMobile ? 30 : 30 }} />
+            <Link href={item.link}>
+            <GitHubIcon sx={{ color: teal[400], fontSize: isMobile ? 30 : 30 }} />
             </Link>
           </Box>
           <Box

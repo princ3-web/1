@@ -7,6 +7,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import SettingsIcon from "@mui/icons-material/Settings";
 import { useTheme } from "@mui/material/styles";
 
+
 const Navbar = ({ isMobile }) => {
   const theme = useTheme();
 
