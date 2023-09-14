@@ -41,7 +41,7 @@ const Navbar = ({ isMobile }) => {
           backdropFilter: "blur(5px)",
         }}
       >
-        <Box sx={{ display: "flex",  alignItems:"center" }}>
+        <Box sx={{ display: "flex", border: "1px solid red", alignItems:"center" }}>
           <CardMedia
             component="img"
             image={logo}
@@ -65,8 +65,6 @@ const Navbar = ({ isMobile }) => {
                   display: isMobile ? "none" : "flex",
                   cursor: "pointer",
                   borderRadius: 2,
-                  px: "16px",
-                  py: "6px",
                   "&:hover": {
                     outline: "1px solid" + grey[700],
                     backgroundColor: blueGrey[800],

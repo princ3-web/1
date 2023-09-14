@@ -34,9 +34,8 @@ const App = () => {
     <>
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <Element name="start">
-          <Navbar isMobile={isMobile} />
+          <StartContainer isMobile={isMobile} />
         </Element>
-        <StartContainer isMobile={isMobile} />
         <Element name="demos">
           <DemosContainer isMobile={isMobile} />
         </Element>

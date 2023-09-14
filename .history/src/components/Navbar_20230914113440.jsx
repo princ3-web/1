@@ -6,7 +6,8 @@ import { CardMedia } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import SettingsIcon from "@mui/icons-material/Settings";
 import { useTheme } from "@mui/material/styles";
-import { Link as ScrollLink } from "react-scroll";
+import { Link as ScrollLink } from 'react-scroll';
+
 
 const Navbar = ({ isMobile }) => {
   const theme = useTheme();
@@ -41,7 +42,7 @@ const Navbar = ({ isMobile }) => {
           backdropFilter: "blur(5px)",
         }}
       >
-        <Box sx={{ display: "flex",  alignItems:"center" }}>
+        <Box sx={{ display: "flex" }}>
           <CardMedia
             component="img"
             image={logo}
@@ -57,33 +58,34 @@ const Navbar = ({ isMobile }) => {
               mr: 2,
             }}
           />
-
+           <ScrollLink to="section1" smooth={true} duration={500}>
+           
           {items.map((item) => (
-            <ScrollLink to={item} smooth={true} duration={500}>
-              <Box
-                sx={{
-                  display: isMobile ? "none" : "flex",
-                  cursor: "pointer",
-                  borderRadius: 2,
-                  px: "16px",
-                  py: "6px",
-                  "&:hover": {
-                    outline: "1px solid" + grey[700],
-                    backgroundColor: blueGrey[800],
-                  },
-                }}
+            <Box
+              sx={{
+                display: isMobile ? "none" : "flex",
+                p: "8px",
+                cursor: "pointer",
+                borderRadius: 2,
+                "&:hover": {
+                  outline: "1px solid" + grey[700],
+                  backgroundColor: blueGrey[800],
+                },
+              }}
+            >
+              <Typography
+                color={grey[100]}
+                variant="subtitle2"
+                fontWeight={"Bold"}
+                sx={{ textTransform: "capitalize" }}
               >
-                <Typography
-                  color={grey[100]}
-                  variant="subtitle2"
-                  fontWeight={"Bold"}
-                  sx={{ textTransform: "capitalize" }}
-                >
-                  {item}
-                </Typography>
-              </Box>
-            </ScrollLink>
+                {item}
+              </Typography>
+            </Box>
           ))}
+          </ScrollLink>
+
+
         </Box>
 
         <Box sx={{ display: "flex" }}>

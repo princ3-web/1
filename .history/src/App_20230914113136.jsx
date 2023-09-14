@@ -24,8 +24,8 @@ import vscode from "../src/assets/icons/vscode.png";
 import photoshop from "../src/assets/icons/photoshop.png";
 import mainImage from "../src/assets/images/main.png";
 import { useMediaQuery } from "@material-ui/core";
-import { Link } from "@mui/material";
-import { Element } from "react-scroll";
+import {Link} from "@mui/material";
+
 
 const App = () => {
   const isMobile = useMediaQuery("(max-width: 700px)");
@@ -33,19 +33,11 @@ const App = () => {
   return (
     <>
       <LocalizationProvider dateAdapter={AdapterDayjs}>
-        <Element name="start">
-          <Navbar isMobile={isMobile} />
-        </Element>
+        <Navbar isMobile={isMobile} />
         <StartContainer isMobile={isMobile} />
-        <Element name="demos">
-          <DemosContainer isMobile={isMobile} />
-        </Element>
-        <Element name="skills">
-          <SkillsContainer isMobile={isMobile} />
-        </Element>
-        <Element name="contact">
-          <ContactContainer isMobile={isMobile} />
-        </Element>
+        <DemosContainer isMobile={isMobile} />
+        <SkillsContainer isMobile={isMobile} />
+        <ContactContainer isMobile={isMobile} />
         <Bottombar isMobile={isMobile} />
       </LocalizationProvider>
     </>
@@ -189,7 +181,7 @@ const DemosContainer = ({ isMobile }) => {
             </Typography>
           </Box>
           {items.map((item, n) => (
-            <Link href={item.link} sx={{ textDecoration: "none" }}>
+            <Link href={item.link} sx={{textDecoration:"none"}}>
               <Box
                 onMouseOver={() => setSelectedItem(n)}
                 sx={{

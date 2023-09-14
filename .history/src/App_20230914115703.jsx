@@ -36,6 +36,7 @@ const App = () => {
         <Element name="start">
           <Navbar isMobile={isMobile} />
         </Element>
+
         <StartContainer isMobile={isMobile} />
         <Element name="demos">
           <DemosContainer isMobile={isMobile} />

@@ -33,19 +33,17 @@ const App = () => {
   return (
     <>
       <LocalizationProvider dateAdapter={AdapterDayjs}>
+        <Navbar isMobile={isMobile} />
         <Element name="start">
-          <Navbar isMobile={isMobile} />
+          <StartContainer isMobile={isMobile} />
         </Element>
-        <StartContainer isMobile={isMobile} />
         <Element name="demos">
           <DemosContainer isMobile={isMobile} />
         </Element>
-        <Element name="skills">
-          <SkillsContainer isMobile={isMobile} />
+        <Element name="start">
+        <SkillsContainer isMobile={isMobile} />
         </Element>
-        <Element name="contact">
-          <ContactContainer isMobile={isMobile} />
-        </Element>
+        <ContactContainer isMobile={isMobile} />
         <Bottombar isMobile={isMobile} />
       </LocalizationProvider>
     </>

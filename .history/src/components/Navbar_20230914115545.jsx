@@ -66,7 +66,7 @@ const Navbar = ({ isMobile }) => {
                   cursor: "pointer",
                   borderRadius: 2,
                   px: "16px",
-                  py: "6px",
+                  py
                   "&:hover": {
                     outline: "1px solid" + grey[700],
                     backgroundColor: blueGrey[800],

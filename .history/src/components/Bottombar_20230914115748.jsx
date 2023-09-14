@@ -9,9 +9,9 @@ import { CardMedia } from "@mui/material";
 
 const Bottombar = ({ isMobile }) => {
   const icons = [
-    { icon: github, link: "https://github.com/princ3-web" },
+    { icon: github, link: "" },
     { icon: tiktok, link: "https://www.tiktok.com/@mypixelwizard" },
-    { icon: linkedin, link: "https://www.linkedin.com/in/michal-gornicki/" },
+    { icon: linkedin },
     { icon: discord, link: "http://www.discord.com/users/696096824301453412" },
   ];
   return (
