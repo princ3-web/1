@@ -25,10 +25,12 @@ import mainImage from "../src/assets/images/main.png";
 import { useMediaQuery } from "@material-ui/core";
 import { Link } from "@mui/material";
 import { Element } from "react-scroll";
-import ParticleBackground from "react-particle-backgrounds";
+import ParticleBackground from 'react-particle-backgrounds'
 
 const App = () => {
   const isMobile = useMediaQuery("(max-width: 700px)");
+
+
 
   return (
     <>
@@ -61,31 +63,6 @@ const StartContainer = ({ isMobile }) => {
     "Turning visions into reality, I specialize in crafting custom websites that mirror your identity, as well as bringing blueprint projects to life.",
   ];
   const theme = useTheme();
-
-  const settings = {
-    canvas: {
-      canvasFillSpace: true,
-      useBouncyWalls: false,
-    },
-    particle: {
-      particleCount: 50,
-      color: "#94ecbe",
-      minSize: 1,
-      maxSize: 5,
-    },
-    velocity: {
-      directionAngle: 0,
-      directionAngleVariance: 360,
-      minSpeed: 0.1,
-      maxSpeed: 1,
-    },
-    opacity: {
-      minOpacity: 0,
-      maxOpacity: 0.5,
-      opacityTransitionTime: 3000,
-    },
-  };
-
   return (
     <MainContainer height={"684px"}>
       <Box
@@ -98,9 +75,7 @@ const StartContainer = ({ isMobile }) => {
           background: "linear-gradient(" + theme.palette.customTeal[900] + "," + teal[600] + ")",
         }}
       >
-        <Box sx={{ position: "absolute", height: "100%", width: "100vw" }}>
-          <ParticleBackground settings={settings} />
-        </Box>
+        <ParticleBackground settings={settings} />
         <Box
           sx={{
             boxSizing: "border-box",
@@ -117,7 +92,7 @@ const StartContainer = ({ isMobile }) => {
               alignItems: "center",
               justifyContent: "space-between",
               boxSizing: "border-box",
-              pr: "80px",
+              pr: "80px"
             }}
           >
             <Typography variant="h6" fontWeight={100} color={teal[600]}>
@@ -148,7 +123,6 @@ const StartContainer = ({ isMobile }) => {
             pl: "24px",
             pt: "150px",
             borderBottomLeftRadius: "15px",
-            zIndex: 1,
           }}
         >
           <Calendar />

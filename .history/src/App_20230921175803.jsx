@@ -68,7 +68,7 @@ const StartContainer = ({ isMobile }) => {
       useBouncyWalls: false,
     },
     particle: {
-      particleCount: 50,
+      particleCount: 550,
       color: "#94ecbe",
       minSize: 1,
       maxSize: 5,

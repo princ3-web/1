@@ -65,6 +65,8 @@ const StartContainer = ({ isMobile }) => {
   const settings = {
     canvas: {
       canvasFillSpace: true,
+      width: 200,
+      height: 200,
       useBouncyWalls: false,
     },
     particle: {

@@ -65,19 +65,21 @@ const StartContainer = ({ isMobile }) => {
   const settings = {
     canvas: {
       canvasFillSpace: true,
+      width: 200,
+      height: 200,
       useBouncyWalls: false,
     },
     particle: {
       particleCount: 50,
       color: "#94ecbe",
-      minSize: 1,
+      minSize: 2,
       maxSize: 5,
     },
     velocity: {
       directionAngle: 0,
       directionAngleVariance: 360,
-      minSpeed: 0.1,
-      maxSpeed: 1,
+      minSpeed: 1,
+      maxSpeed: 3,
     },
     opacity: {
       minOpacity: 0,
@@ -98,7 +100,7 @@ const StartContainer = ({ isMobile }) => {
           background: "linear-gradient(" + theme.palette.customTeal[900] + "," + teal[600] + ")",
         }}
       >
-        <Box sx={{ position: "absolute", height: "100%", width: "100vw" }}>
+        <Box sx>
           <ParticleBackground settings={settings} />
         </Box>
         <Box
@@ -148,7 +150,6 @@ const StartContainer = ({ isMobile }) => {
             pl: "24px",
             pt: "150px",
             borderBottomLeftRadius: "15px",
-            zIndex: 1,
           }}
         >
           <Calendar />

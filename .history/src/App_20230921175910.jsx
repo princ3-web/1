@@ -71,7 +71,7 @@ const StartContainer = ({ isMobile }) => {
       particleCount: 50,
       color: "#94ecbe",
       minSize: 1,
-      maxSize: 5,
+      maxSize: 500,
     },
     velocity: {
       directionAngle: 0,

@@ -65,6 +65,8 @@ const StartContainer = ({ isMobile }) => {
   const settings = {
     canvas: {
       canvasFillSpace: true,
+      width: 200,
+      height: 200,
       useBouncyWalls: false,
     },
     particle: {
@@ -81,7 +83,7 @@ const StartContainer = ({ isMobile }) => {
     },
     opacity: {
       minOpacity: 0,
-      maxOpacity: 0.5,
+      maxOpacity: 0.1,
       opacityTransitionTime: 3000,
     },
   };
