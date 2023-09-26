@@ -172,7 +172,7 @@ const DemosContainer = ({ isMobile }) => {
       title: "Steam clone",
       text: "Precise clone of popular digital distribution website.",
       image: image0,
-      link: "https://princ3-web.github.io/steamclone/",
+      link: "https://i.ibb.co/mc4TzzH/4.png,
     },
     {
       title: "Design software",
@@ -325,13 +325,11 @@ const DesignContainer = ({ isMobile }) => {
       title: "Dead Cells",
       text: "Precise clone of popular digital distribution website.",
       image: image4,
-      link: "https://i.ibb.co/mc4TzzH/4.png",
     },
     {
       title: "Dental Clinic",
       text: "A design software website with intuitive navigation and an aesthetically pleasing interface.",
       image: image5,
-      link: "https://i.ibb.co/drwJHVQ/5.png",
     },
   ];
 

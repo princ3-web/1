@@ -294,7 +294,7 @@ const DemosContainer = ({ isMobile }) => {
               width: "466px",
               height: "626px",
               borderRadius: "10px",
-              overflow: "auto",
+              overflow: "hidden",
             }}
           >
             <CardMedia
@@ -303,11 +303,12 @@ const DemosContainer = ({ isMobile }) => {
               alt="Sample Image"
               sx={{
                 boxSizing: "border-box",
-                objectFit: "cover",
-                borderRadius: "15px",
+                objectFit: "contain",
+                objectPosition: "50% 0%",
+                height: "550px",
+                width: "fit-content",
+                borderRadius: "5px",
                 filter: "drop-shadow(0px 15px 5px " + theme.palette.customTeal[700] + ")",
-                pb: "100px",
-                transform: "scale(0.75) translate(0%, 20%)",
               }}
             />
           </Box>
@@ -325,13 +326,11 @@ const DesignContainer = ({ isMobile }) => {
       title: "Dead Cells",
       text: "Precise clone of popular digital distribution website.",
       image: image4,
-      link: "https://i.ibb.co/mc4TzzH/4.png",
     },
     {
       title: "Dental Clinic",
       text: "A design software website with intuitive navigation and an aesthetically pleasing interface.",
       image: image5,
-      link: "https://i.ibb.co/drwJHVQ/5.png",
     },
   ];
 

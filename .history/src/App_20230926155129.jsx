@@ -15,8 +15,6 @@ import image0 from "../src/assets/images/0.png";
 import image1 from "../src/assets/images/1.png";
 import image2 from "../src/assets/images/2.png";
 import image3 from "../src/assets/images/3.png";
-import image4 from "../src/assets/images/4.png";
-import image5 from "../src/assets/images/5.png";
 import github from "../src/assets/icons/github.png";
 import react from "../src/assets/icons/react.png";
 import mui from "../src/assets/icons/mui.png";
@@ -42,8 +40,8 @@ const App = () => {
         <Element name="demos">
           <DemosContainer isMobile={isMobile} />
         </Element>
-        <Element name="designs">
-          <DesignContainer isMobile={isMobile} />
+        <Element name="design">
+          <DemosContainer isMobile={isMobile} />
         </Element>
         <Element name="skills">
           <SkillsContainer isMobile={isMobile} />
@@ -230,7 +228,7 @@ const DemosContainer = ({ isMobile }) => {
               Check my project demos
             </Typography>
             <Typography variant="h4" sx={{ color: teal[400], fontWeight: 600 }}>
-              showcase of website projects
+              showcase of projects
             </Typography>
             <Typography sx={{ color: grey[400], fontWeight: 400, mt: 2 }}>
               The combination of React JS and Material UI offers a vast range of customization
@@ -239,40 +237,40 @@ const DemosContainer = ({ isMobile }) => {
             </Typography>
           </Box>
           <Box>
-            {items.map((item, n) => (
-              <Link href={item.link} sx={{ textDecoration: "none" }}>
-                <Box
-                  onMouseOver={() => setSelectedItem(n)}
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    mt: 2,
-                    py: 1,
-                    borderRadius: 2,
-                    cursor: "pointer",
-                    backgroundColor: selectedItem === n ? teal[900] + 30 : "none",
-                    outline:
-                      selectedItem === n ? "2px solid" + teal[500] : "2px solid" + teal[500] + "20",
-                    transition: "0.2s",
-                  }}
-                >
-                  <Box sx={{ m: 2 }}>
-                    <GitHubIcon sx={{ fontSize: 40, color: teal[500] }} />
-                  </Box>
-                  <Box sx={{ mr: "10px" }}>
-                    <Typography sx={{ color: grey[100], fontWeight: 600 }} variant="subtitle2">
-                      {item.title}
-                    </Typography>
-                    <Typography sx={{ color: grey[500] }} variant="subtitle2">
-                      {item.text}
-                    </Typography>
-                    <Typography sx={{ color: teal[400], fontWeight: 600 }} variant="subtitle2">
-                      Learn more
-                    </Typography>
-                  </Box>
+          {items.map((item, n) => (
+            <Link href={item.link} sx={{ textDecoration: "none" }}>
+              <Box
+                onMouseOver={() => setSelectedItem(n)}
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  mt: 2,
+                  py: 1,
+                  borderRadius: 2,
+                  cursor: "pointer",
+                  backgroundColor: selectedItem === n ? teal[900] + 30 : "none",
+                  outline:
+                    selectedItem === n ? "2px solid" + teal[500] : "2px solid" + teal[500] + "20",
+                  transition: "0.2s",
+                }}
+              >
+                <Box sx={{ m: 2 }}>
+                  <GitHubIcon sx={{ fontSize: 40, color: teal[500] }} />
                 </Box>
-              </Link>
-            ))}
+                <Box sx={{ mr: "10px" }}>
+                  <Typography sx={{ color: grey[100], fontWeight: 600 }} variant="subtitle2">
+                    {item.title}
+                  </Typography>
+                  <Typography sx={{ color: grey[500] }} variant="subtitle2">
+                    {item.text}
+                  </Typography>
+                  <Typography sx={{ color: teal[400], fontWeight: 600 }} variant="subtitle2">
+                    Learn more
+                  </Typography>
+                </Box>
+              </Box>
+            </Link>
+          ))}
           </Box>
         </Box>
         <Box
@@ -294,7 +292,7 @@ const DemosContainer = ({ isMobile }) => {
               width: "466px",
               height: "626px",
               borderRadius: "10px",
-              overflow: "auto",
+              overflow: "hidden",
             }}
           >
             <CardMedia
@@ -303,11 +301,12 @@ const DemosContainer = ({ isMobile }) => {
               alt="Sample Image"
               sx={{
                 boxSizing: "border-box",
-                objectFit: "cover",
-                borderRadius: "15px",
+                objectFit: "contain",
+                objectPosition: "50% 0%",
+                height: "550px",
+                width: "fit-content",
+                borderRadius: "5px",
                 filter: "drop-shadow(0px 15px 5px " + theme.palette.customTeal[700] + ")",
-                pb: "100px",
-                transform: "scale(0.75) translate(0%, 20%)",
               }}
             />
           </Box>
@@ -316,147 +315,6 @@ const DemosContainer = ({ isMobile }) => {
     </MainContainer>
   );
 };
-
-const DesignContainer = ({ isMobile }) => {
-  const theme = useTheme();
-
-  const items = [
-    {
-      title: "Dead Cells",
-      text: "Precise clone of popular digital distribution website.",
-      image: image4,
-      link: "https://i.ibb.co/mc4TzzH/4.png",
-    },
-    {
-      title: "Dental Clinic",
-      text: "A design software website with intuitive navigation and an aesthetically pleasing interface.",
-      image: image5,
-      link: "https://i.ibb.co/drwJHVQ/5.png",
-    },
-  ];
-
-  const [selectedItem, setSelectedItem] = useState(0);
-
-  return (
-    <MainContainer height={isMobile ? "auto" : "954px"}>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          position: "relative",
-          height: "100%",
-          pb: isMobile ? "40px" : 0,
-          background:
-            "linear-gradient(" +
-            theme.palette.customTeal[800] +
-            "," +
-            theme.palette.customTeal[700] +
-            ")",
-        }}
-      >
-        <Box
-          sx={{
-            width: "773px",
-            height: "100%",
-            pl: isMobile ? "30px" : "180px",
-            pr: isMobile ? "30px" : "90px",
-            pt: "116px",
-            boxSizing: "border-box",
-          }}
-        >
-          <Box>
-            <Typography sx={{ color: teal[400], fontWeight: 600, mb: 1 }}>
-              Visual projects
-            </Typography>
-            <Typography variant="h4" sx={{ color: grey[100], fontWeight: 600 }}>
-              Check my visual projects
-            </Typography>
-            <Typography variant="h4" sx={{ color: teal[400], fontWeight: 600 }}>
-              showcase of visual projects
-            </Typography>
-            <Typography sx={{ color: grey[400], fontWeight: 400, mt: 2 }}>
-              Here is my collection of visual projects for websites.
-            </Typography>
-          </Box>
-          <Box>
-            {items.map((item, n) => (
-              <Link href={item.link} sx={{ textDecoration: "none" }}>
-                <Box
-                  onMouseOver={() => setSelectedItem(n)}
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    mt: 2,
-                    py: 1,
-                    borderRadius: 2,
-                    cursor: "pointer",
-                    backgroundColor: selectedItem === n ? teal[900] + 30 : "none",
-                    outline:
-                      selectedItem === n ? "2px solid" + teal[500] : "2px solid" + teal[500] + "20",
-                    transition: "0.2s",
-                  }}
-                >
-                  <Box sx={{ m: 2 }}>
-                    <GitHubIcon sx={{ fontSize: 40, color: teal[500] }} />
-                  </Box>
-                  <Box sx={{ mr: "10px" }}>
-                    <Typography sx={{ color: grey[100], fontWeight: 600 }} variant="subtitle2">
-                      {item.title}
-                    </Typography>
-                    <Typography sx={{ color: grey[500] }} variant="subtitle2">
-                      {item.text}
-                    </Typography>
-                    <Typography sx={{ color: teal[400], fontWeight: 600 }} variant="subtitle2">
-                      Learn more
-                    </Typography>
-                  </Box>
-                </Box>
-              </Link>
-            ))}
-          </Box>
-        </Box>
-        <Box
-          sx={{
-            display: isMobile ? "none" : "flex",
-            width: "740px",
-            height: "100%",
-            pr: "124px",
-            pt: "116px",
-            boxSizing: "border-box",
-          }}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              backgroundColor: teal[500] + 60,
-              width: "466px",
-              height: "626px",
-              borderRadius: "10px",
-              overflow: "auto",
-            }}
-          >
-            <CardMedia
-              component="img"
-              image={items[selectedItem].image}
-              alt="Sample Image"
-              sx={{
-                boxSizing: "border-box",
-                objectFit: "cover",
-                borderRadius: "15px",
-                filter: "drop-shadow(0px 15px 5px " + theme.palette.customTeal[700] + ")",
-                pb: "100px",
-                transform: "scale(0.75) translate(0%, 32%)",
-              }}
-            />
-          </Box>
-        </Box>
-      </Box>
-    </MainContainer>
-  );
-};
-
 const SkillsContainer = ({ isMobile }) => {
   const theme = useTheme();
 

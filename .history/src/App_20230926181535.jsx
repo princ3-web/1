@@ -331,7 +331,7 @@ const DesignContainer = ({ isMobile }) => {
       title: "Dental Clinic",
       text: "A design software website with intuitive navigation and an aesthetically pleasing interface.",
       image: image5,
-      link: "https://i.ibb.co/drwJHVQ/5.png",
+      
     },
   ];
 

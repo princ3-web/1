@@ -46,7 +46,25 @@ const theme = createTheme({
   },
 });
 
-
+const useStyles = makeStyles({
+  scrollbar: {
+    '&::-webkit-scrollbar': {
+      width: '12px',
+    },
+    '&::-webkit-scrollbar-track': {
+      background: '#f1f1f1',
+    },
+    '&::-webkit-scrollbar-thumb': {
+      background: '#888',
+      borderRadius: '10px',
+    },
+    '&::-webkit-scrollbar-thumb:hover': {
+      background: '#555',
+    },
+    scrollbarWidth: 'thin',
+    scrollbarColor: '#888 #f1f1f1',
+  },
+});
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
