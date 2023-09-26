@@ -2,6 +2,7 @@ import React from "react";
 import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
 import { Box } from "@mui/material";
 import { teal } from "@mui/material/colors";
+import {useTheme} from "@mui/material";
 
 const Calendar = () => {
 
@@ -9,7 +10,7 @@ const Calendar = () => {
     <Box
       sx={{
         display: "flex",
-        backgroundColor: teal[800] + 50,
+        backgroundColor: teal[800],
         width: "320px",
         height: "300px",
         borderRadius: "20px",

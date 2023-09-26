@@ -478,13 +478,13 @@ const ContactContainer = ({ isMobile }) => {
     },
     velocity: {
       directionAngle: 0,
-      directionAngleVariance: 30,
+      directionAngleVariance: 15,
       minSpeed: 0.1,
       maxSpeed: 1,
     },
     opacity: {
       minOpacity: 0,
-      maxOpacity: 0.75,
+      maxOpacity: 0.5,
       opacityTransitionTime: 3000,
     },
   };
@@ -540,10 +540,10 @@ const ContactContainer = ({ isMobile }) => {
           sx={{
             display: isMobile ? "none" : "flex",
             position: "absolute",
-            height: "250px",
-            width: "250px",
+            height: "350px",
+            width: "350px",
             right: "238px",
-            bottom: "120px",
+            bottom: "50px",
           }}
         >
           <Box
@@ -551,8 +551,8 @@ const ContactContainer = ({ isMobile }) => {
               position: "absolute",
               zIndex: 2,
               borderRadius: "100%",
-              height: "100%",
-              width: "100%",
+              height: "350px",
+              width: "350px",
               overflow: "hidden",
             }}
           >

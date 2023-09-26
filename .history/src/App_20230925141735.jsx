@@ -541,9 +541,9 @@ const ContactContainer = ({ isMobile }) => {
             display: isMobile ? "none" : "flex",
             position: "absolute",
             height: "250px",
-            width: "250px",
+            width: "350px",
             right: "238px",
-            bottom: "120px",
+            bottom: "50px",
           }}
         >
           <Box
@@ -551,8 +551,8 @@ const ContactContainer = ({ isMobile }) => {
               position: "absolute",
               zIndex: 2,
               borderRadius: "100%",
-              height: "100%",
-              width: "100%",
+              height: "350px",
+              width: "350px",
               overflow: "hidden",
             }}
           >

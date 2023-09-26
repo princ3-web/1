@@ -543,7 +543,7 @@ const ContactContainer = ({ isMobile }) => {
             height: "250px",
             width: "250px",
             right: "238px",
-            bottom: "120px",
+            bottom: "150px",
           }}
         >
           <Box

@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import Bottombar from "./components/Bottombar";
 import MainContainer from "./components/MainContainer";
 import { Typography, Box, Button } from "@mui/material";
-import { grey, blueGrey, teal, blue } from "@mui/material/colors";
+import { grey, blueGrey, teal, blue, green } from "@mui/material/colors";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import Calendar from "./components/Calendar";
@@ -95,7 +95,7 @@ const StartContainer = ({ isMobile }) => {
           position: "relative",
           height: "100%",
           backgroundColor: theme.palette.customTeal[800],
-          background: "linear-gradient(" + theme.palette.customTeal[900] + "," + teal[600] + ")",
+          background: "linear-gradient(" + green[900] + "," + green[600] + ")",
         }}
       >
         <Box sx={{ position: "absolute", height: "100%", width: "100vw" }}>
@@ -465,30 +465,6 @@ const SkillsContainer = ({ isMobile }) => {
 const ContactContainer = ({ isMobile }) => {
   const theme = useTheme();
 
-  const settings = {
-    canvas: {
-      canvasFillSpace: true,
-      useBouncyWalls: false,
-    },
-    particle: {
-      particleCount: 50,
-      color: "#0CF9FF",
-      minSize: 2,
-      maxSize: 2,
-    },
-    velocity: {
-      directionAngle: 0,
-      directionAngleVariance: 30,
-      minSpeed: 0.1,
-      maxSpeed: 1,
-    },
-    opacity: {
-      minOpacity: 0,
-      maxOpacity: 0.75,
-      opacityTransitionTime: 3000,
-    },
-  };
-
   return (
     <MainContainer height={"462px"}>
       <Box
@@ -540,24 +516,12 @@ const ContactContainer = ({ isMobile }) => {
           sx={{
             display: isMobile ? "none" : "flex",
             position: "absolute",
-            height: "250px",
-            width: "250px",
+            height: "350px",
+            width: "350px",
             right: "238px",
-            bottom: "120px",
+            bottom: "50px",
           }}
         >
-          <Box
-            sx={{
-              position: "absolute",
-              zIndex: 2,
-              borderRadius: "100%",
-              height: "100%",
-              width: "100%",
-              overflow: "hidden",
-            }}
-          >
-            <ParticleBackground settings={settings} />
-          </Box>
           <CardMedia
             component="img"
             image={mainImage}

@@ -543,7 +543,7 @@ const ContactContainer = ({ isMobile }) => {
             height: "250px",
             width: "250px",
             right: "238px",
-            bottom: "120px",
+            bottom: "50px",
           }}
         >
           <Box
@@ -552,7 +552,7 @@ const ContactContainer = ({ isMobile }) => {
               zIndex: 2,
               borderRadius: "100%",
               height: "100%",
-              width: "100%",
+              width: "250px",
               overflow: "hidden",
             }}
           >

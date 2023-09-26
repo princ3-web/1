@@ -472,19 +472,19 @@ const ContactContainer = ({ isMobile }) => {
     },
     particle: {
       particleCount: 50,
-      color: "#0CF9FF",
-      minSize: 2,
-      maxSize: 2,
+      color: "#94ecbe",
+      minSize: 1,
+      maxSize: 5,
     },
     velocity: {
       directionAngle: 0,
-      directionAngleVariance: 30,
+      directionAngleVariance: 360,
       minSpeed: 0.1,
       maxSpeed: 1,
     },
     opacity: {
       minOpacity: 0,
-      maxOpacity: 0.75,
+      maxOpacity: 0.5,
       opacityTransitionTime: 3000,
     },
   };
@@ -540,30 +540,18 @@ const ContactContainer = ({ isMobile }) => {
           sx={{
             display: isMobile ? "none" : "flex",
             position: "absolute",
-            height: "250px",
-            width: "250px",
+            height: "350px",
+            width: "350px",
             right: "238px",
-            bottom: "120px",
+            bottom: "50px",
           }}
         >
           <Box
-            sx={{
-              position: "absolute",
-              zIndex: 2,
-              borderRadius: "100%",
-              height: "100%",
-              width: "100%",
-              overflow: "hidden",
-            }}
+            sx={{ position: "relative", border: "1px solid red", height: "350px", width: "350px", zIndex: 2 }}
           >
             <ParticleBackground settings={settings} />
           </Box>
-          <CardMedia
-            component="img"
-            image={mainImage}
-            alt="Sample Image"
-            sx={{ objectFit: "cover" }}
-          />
+        
         </Box>
       </Box>
     </MainContainer>

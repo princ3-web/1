@@ -115,7 +115,7 @@ const StartContainer = ({ isMobile }) => {
             sx={{
               display: "flex",
               flexDirection: isMobile ? "column" : "row",
-              alignItems: isMobile ? "flex-start" : "center",
+              alignItems: isMobile ? "column" : "row",
               justifyContent: "space-between",
               boxSizing: "border-box",
               pr: "80px",
@@ -465,30 +465,6 @@ const SkillsContainer = ({ isMobile }) => {
 const ContactContainer = ({ isMobile }) => {
   const theme = useTheme();
 
-  const settings = {
-    canvas: {
-      canvasFillSpace: true,
-      useBouncyWalls: false,
-    },
-    particle: {
-      particleCount: 50,
-      color: "#0CF9FF",
-      minSize: 2,
-      maxSize: 2,
-    },
-    velocity: {
-      directionAngle: 0,
-      directionAngleVariance: 30,
-      minSpeed: 0.1,
-      maxSpeed: 1,
-    },
-    opacity: {
-      minOpacity: 0,
-      maxOpacity: 0.75,
-      opacityTransitionTime: 3000,
-    },
-  };
-
   return (
     <MainContainer height={"462px"}>
       <Box
@@ -540,24 +516,12 @@ const ContactContainer = ({ isMobile }) => {
           sx={{
             display: isMobile ? "none" : "flex",
             position: "absolute",
-            height: "250px",
-            width: "250px",
+            height: "350px",
+            width: "350px",
             right: "238px",
-            bottom: "120px",
+            bottom: "50px",
           }}
         >
-          <Box
-            sx={{
-              position: "absolute",
-              zIndex: 2,
-              borderRadius: "100%",
-              height: "100%",
-              width: "100%",
-              overflow: "hidden",
-            }}
-          >
-            <ParticleBackground settings={settings} />
-          </Box>
           <CardMedia
             component="img"
             image={mainImage}

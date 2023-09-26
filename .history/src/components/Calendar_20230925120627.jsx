@@ -9,7 +9,7 @@ const Calendar = () => {
     <Box
       sx={{
         display: "flex",
-        backgroundColor: teal[800] + 50,
+        backgroundColor: teal[800],
         width: "320px",
         height: "300px",
         borderRadius: "20px",
