@@ -25,7 +25,7 @@ import mui from "../src/assets/icons/mui.png";
 import more from "../src/assets/icons/more.png";
 import vscode from "../src/assets/icons/vscode.png";
 import photoshop from "../src/assets/icons/photoshop.png";
-import mainImage from "../src/assets/images/main.png";
+import mainImage from "../src/assets/images/OIG.png";
 import { useMediaQuery } from "@material-ui/core";
 import { Link } from "@mui/material";
 import { Element } from "react-scroll";
@@ -606,8 +606,8 @@ const ContactContainer = ({ isMobile }) => {
       useBouncyWalls: false,
     },
     particle: {
-      particleCount: 50,
-      color: "#0CF9FF",
+      particleCount: 15,
+      color: "white",
       minSize: 2,
       maxSize: 2,
     },
@@ -619,7 +619,7 @@ const ContactContainer = ({ isMobile }) => {
     },
     opacity: {
       minOpacity: 0,
-      maxOpacity: 0.75,
+      maxOpacity: 1,
       opacityTransitionTime: 3000,
     },
   };
@@ -675,10 +675,10 @@ const ContactContainer = ({ isMobile }) => {
           sx={{
             display: isMobile ? "none" : "flex",
             position: "absolute",
-            height: "250px",
-            width: "250px",
+            height: "350px",
+            width: "350px",
             right: "238px",
-            bottom: "120px",
+            bottom: "50px",
           }}
         >
           <Box
