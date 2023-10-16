@@ -587,7 +587,7 @@ const ContactContainer = ({ isMobile }) => {
       particleCount: 75,
       color: "white",
       minSize: 2,
-      maxSize: 1,
+      maxSize: 2,
     },
     velocity: {
       directionAngle: -45,

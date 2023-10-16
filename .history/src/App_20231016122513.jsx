@@ -584,10 +584,10 @@ const ContactContainer = ({ isMobile }) => {
       useBouncyWalls: false,
     },
     particle: {
-      particleCount: 75,
+      particleCount: 155,
       color: "white",
       minSize: 2,
-      maxSize: 1,
+      maxSize: 2,
     },
     velocity: {
       directionAngle: -45,

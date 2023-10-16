@@ -166,6 +166,159 @@ const StartContainer = ({ isMobile }) => {
   );
 };
 
+const DemosContainer = ({ isMobile }) => {
+  const theme = useTheme();
+
+  const items = [
+    {
+      title: "Steam clone",
+      text: "Precise clone of popular digital distribution website.",
+      image: image0,
+      link: "https://princ3-web.github.io/steamclone/",
+    },
+    {
+      title: "Design software",
+      text: "A design software website with intuitive navigation and an aesthetically pleasing interface.",
+      image: image1,
+      link: "https://princ3-web.github.io/designstudio/",
+    },
+    {
+      title: "Academy",
+      text: "Online academy website seamlessly blending aesthetic appeal with user-friendly functionality.",
+      image: image2,
+      link: "https://princ3-web.github.io/academy/",
+    },
+
+    {
+      title: "Tik-tok style app",
+      text: "TikTok-style app with a captivating design and seamless user interactions.",
+      image: image3,
+      link: "https://princ3-web.github.io/quicktok/",
+    },
+  ];
+
+  const [selectedItem, setSelectedItem] = useState(0);
+
+  return (
+    <MainContainer height={isMobile ? "auto" : "954px"}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          position: "relative",
+          height: "100%",
+          pb: isMobile ? "40px" : 0,
+          background:
+            "linear-gradient(" +
+            theme.palette.customTeal[800] +
+            "," +
+            theme.palette.customTeal[700] +
+            ")",
+        }}
+      >
+        <Box
+          sx={{
+            width: "773px",
+            height: "100%",
+            pl: isMobile ? "30px" : "180px",
+            pr: isMobile ? "30px" : "90px",
+            pt: "116px",
+            boxSizing: "border-box",
+          }}
+        >
+          <Box>
+            <Typography sx={{ color: teal[400], fontWeight: 600, mb: 1 }}>Demos</Typography>
+            <Typography variant="h4" sx={{ color: grey[100], fontWeight: 600 }}>
+              Check my project demos
+            </Typography>
+            <Typography variant="h4" sx={{ color: teal[400], fontWeight: 600 }}>
+              showcase of website projects
+            </Typography>
+            <Typography sx={{ color: grey[400], fontWeight: 400, mt: 2 }}>
+              The combination of React JS and Material UI offers a vast range of customization
+              options coupled with rapid development capabilities. Here is a collection of projects
+              created through the utilization of these technologies.
+            </Typography>
+          </Box>
+          <Box>
+            {items.map((item, n) => (
+              <Link href={item.link} sx={{ textDecoration: "none" }}>
+                <Box
+                  onMouseOver={() => setSelectedItem(n)}
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    mt: 2,
+                    py: 1,
+                    borderRadius: 2,
+                    cursor: "pointer",
+                    backgroundColor: selectedItem === n ? teal[900] + 30 : "none",
+                    outline:
+                      selectedItem === n ? "2px solid" + teal[500] : "2px solid" + teal[500] + "20",
+                    transition: "0.2s",
+                  }}
+                >
+                  <Box sx={{ m: 2 }}>
+                    <GitHubIcon sx={{ fontSize: 40, color: teal[500] }} />
+                  </Box>
+                  <Box sx={{ mr: "10px" }}>
+                    <Typography sx={{ color: grey[100], fontWeight: 600 }} variant="subtitle2">
+                      {item.title}
+                    </Typography>
+                    <Typography sx={{ color: grey[500] }} variant="subtitle2">
+                      {item.text}
+                    </Typography>
+                    <Typography sx={{ color: teal[400], fontWeight: 600 }} variant="subtitle2">
+                      Learn more
+                    </Typography>
+                  </Box>
+                </Box>
+              </Link>
+            ))}
+          </Box>
+        </Box>
+        <Box
+          sx={{
+            display: isMobile ? "none" : "flex",
+            width: "740px",
+            height: "100%",
+            pr: "124px",
+            pt: "116px",
+            boxSizing: "border-box",
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              backgroundColor: teal[500] + 60,
+              width: "466px",
+              height: "626px",
+              borderRadius: "10px",
+              overflow: "auto",
+            }}
+          >
+            <CardMedia
+              component="img"
+              image={items[selectedItem].image}
+              alt="Sample Image"
+              sx={{
+                boxSizing: "border-box",
+                objectFit: "cover",
+                borderRadius: "15px",
+                filter: "drop-shadow(0px 15px 5px " + theme.palette.customTeal[700] + ")",
+                pb: "100px",
+                transform: "scale(0.75) translate(0%, 20%)",
+              }}
+            />
+          </Box>
+        </Box>
+      </Box>
+    </MainContainer>
+  );
+};
+
 const DesignContainer = ({ isMobile }) => {
   const theme = useTheme();
 
@@ -247,25 +400,25 @@ const DesignContainer = ({ isMobile }) => {
             }}
           >
             {items.map((item, n) => (
-              <Link
-                href={item.link}
-                sx={{
-                  position: "relative",
-                  width: "30%",
-                  height: "350px",
-                  overflow: "hidden",
-                  m: "1.065%",
-                  transition: "0.5s",
-                  transform: n % 3 === 1 && "scale(1.0) translate(0%, 15%)",
-                  cursor: "pointer",
-                }}
+              <Link href={item.link}
+              sx={{
+                position: "relative",
+                width: "30%",
+                height: "350px",
+                overflow: "hidden",
+                m: "1.065%",
+                transition: "0.5s",
+                transform: n % 3 === 1 && "scale(1.0) translate(0%, 15%)",
+                cursor: "pointer",
+              }}
               >
+             
                 <Box
                   sx={{
                     position: "absolute",
                     display: "flex",
                     justifyContent: "center",
-                    alignItems: "center",
+                    alignItems:"center",
                     width: "100%",
                     height: "100%",
                     backgroundColor: teal[600],
@@ -277,139 +430,8 @@ const DesignContainer = ({ isMobile }) => {
                     },
                   }}
                 >
-                  <Box sx={{ width: "80%" }}>
-                    <Typography variant="h5" sx={{ color: "white" }}>
-                      {item.title}
-                    </Typography>
-                    <Typography sx={{ color: "white" }}>{item.text}</Typography>
-                  </Box>
-                </Box>
-                <CardMedia component="img" image={item.image} alt="Sample Image" />
-              </Link>
-            ))}
-          </Box>
-        </Box>
-      </Box>
-    </MainContainer>
-  );
-};
-
-const DemosContainer = ({ isMobile }) => {
-  const theme = useTheme();
-
-  const items = [
-    {
-      title: "Steam clone",
-      text: "Precise clone of popular digital distribution website.",
-      image: image0,
-      link: "https://princ3-web.github.io/steamclone/",
-    },
-    {
-      title: "Design software",
-      text: "A design software website with intuitive navigation and an aesthetically pleasing interface.",
-      image: image1,
-      link: "https://princ3-web.github.io/designstudio/",
-    },
-    {
-      title: "Academy",
-      text: "Online academy website seamlessly blending aesthetic appeal with user-friendly functionality.",
-      image: image2,
-      link: "https://princ3-web.github.io/academy/",
-    },
-
-    {
-      title: "Tik-tok style app",
-      text: "TikTok-style app with a captivating design and seamless user interactions.",
-      image: image3,
-      link: "https://princ3-web.github.io/quicktok/",
-    },
-  ];
-
-  return (
-    <MainContainer height={isMobile ? "auto" : "auto"}>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "flex-start",
-          position: "relative",
-          height: "100%",
-          pb: isMobile ? "40px" : "40px",
-          background:
-            "linear-gradient(" +
-            theme.palette.customTeal[800] +
-            "," +
-            theme.palette.customTeal[700] +
-            ")",
-        }}
-      >
-        <Box
-          sx={{
-            width: "100%",
-            height: "100%",
-            pl: isMobile ? "30px" : "180px",
-            pr: isMobile ? "30px" : "90px",
-            pt: "116px",
-            boxSizing: "border-box",
-          }}
-        >
-          <Box>
-            <Typography sx={{ color: teal[400], fontWeight: 600, mb: 1 }}>
-              Visual projects
-            </Typography>
-            <Typography variant="h4" sx={{ color: grey[100], fontWeight: 600 }}>
-              Check my visual projects
-            </Typography>
-            <Typography variant="h4" sx={{ color: teal[400], fontWeight: 600 }}>
-              showcase of designs
-            </Typography>
-            <Typography sx={{ color: grey[400], fontWeight: 400, mt: 2 }}>
-              Here is my collection of visual projects for websites.
-            </Typography>
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              flexWrap: "wrap",
-              justifyContent: "flex-start",
-              my: "90px",
-            }}
-          >
-            {items.map((item, n) => (
-              <Link
-                href={item.link}
-                sx={{
-                  position: "relative",
-                  width: "30%",
-                  height: "350px",
-                  overflow: "hidden",
-                  m: "1.065%",
-                  transition: "0.5s",
-                  transform: n % 3 === 1 && "scale(1.0) translate(0%, 15%)",
-                  cursor: "pointer",
-                }}
-              >
-                <Box
-                  sx={{
-                    position: "absolute",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    width: "100%",
-                    height: "100%",
-                    backgroundColor: teal[600],
-                    background: "linear-gradient(" + teal[900] + "," + teal[600] + ")",
-                    filter: "opacity(0)",
-                    transition: "0.2s",
-                    "&:hover": {
-                      filter: "opacity(0.9)",
-                    },
-                  }}
-                >
-                  <Box sx={{ width: "80%" }}>
-                    <Typography variant="h5" sx={{ color: "white" }}>
-                      {item.title}
-                    </Typography>
+                  <Box>
+                    <Typography variant="h5" sx={{ color: "white" }}>{item.title}</Typography>
                     <Typography sx={{ color: "white" }}>{item.text}</Typography>
                   </Box>
                 </Box>
@@ -584,16 +606,16 @@ const ContactContainer = ({ isMobile }) => {
       useBouncyWalls: false,
     },
     particle: {
-      particleCount: 75,
+      particleCount: 155,
       color: "white",
       minSize: 2,
-      maxSize: 1,
+      maxSize: 2,
     },
     velocity: {
-      directionAngle: -45,
-      directionAngleVariance: 60,
-      minSpeed: 0.01,
-      maxSpeed: 0.3,
+      directionAngle: 0,
+      directionAngleVariance: 30,
+      minSpeed: 0.1,
+      maxSpeed: 1,
     },
     opacity: {
       minOpacity: 0,

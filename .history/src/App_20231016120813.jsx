@@ -166,134 +166,6 @@ const StartContainer = ({ isMobile }) => {
   );
 };
 
-const DesignContainer = ({ isMobile }) => {
-  const theme = useTheme();
-
-  const items = [
-    {
-      title: "Dead Cells",
-      text: "Design for indie game official website",
-      image: image4,
-      link: "https://i.ibb.co/mc4TzzH/4.png",
-    },
-    {
-      title: "Dental Clinic",
-      text: "A dental clinic website design project.",
-      image: image5,
-      link: "https://i.ibb.co/XLGS18z/1080.png",
-    },
-    {
-      title: "Dental Clinic II",
-      text: "Second dental clinic website design project.",
-      image: image6,
-      link: "https://i.ibb.co/XtzQrxx/1080.png",
-    },
-    {
-      title: "Mental Therapy",
-      text: "A mental therapy website design project.",
-      image: image7,
-      link: "https://i.ibb.co/ch8SLfr/1440.png",
-    },
-  ];
-
-  return (
-    <MainContainer height={isMobile ? "auto" : "auto"}>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "flex-start",
-          position: "relative",
-          height: "100%",
-          pb: isMobile ? "40px" : "40px",
-          background:
-            "linear-gradient(" +
-            theme.palette.customTeal[800] +
-            "," +
-            theme.palette.customTeal[700] +
-            ")",
-        }}
-      >
-        <Box
-          sx={{
-            width: "100%",
-            height: "100%",
-            pl: isMobile ? "30px" : "180px",
-            pr: isMobile ? "30px" : "90px",
-            pt: "116px",
-            boxSizing: "border-box",
-          }}
-        >
-          <Box>
-            <Typography sx={{ color: teal[400], fontWeight: 600, mb: 1 }}>
-              Visual projects
-            </Typography>
-            <Typography variant="h4" sx={{ color: grey[100], fontWeight: 600 }}>
-              Check my visual projects
-            </Typography>
-            <Typography variant="h4" sx={{ color: teal[400], fontWeight: 600 }}>
-              showcase of designs
-            </Typography>
-            <Typography sx={{ color: grey[400], fontWeight: 400, mt: 2 }}>
-              Here is my collection of visual projects for websites.
-            </Typography>
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              flexWrap: "wrap",
-              justifyContent: "flex-start",
-              my: "90px",
-            }}
-          >
-            {items.map((item, n) => (
-              <Link
-                href={item.link}
-                sx={{
-                  position: "relative",
-                  width: "30%",
-                  height: "350px",
-                  overflow: "hidden",
-                  m: "1.065%",
-                  transition: "0.5s",
-                  transform: n % 3 === 1 && "scale(1.0) translate(0%, 15%)",
-                  cursor: "pointer",
-                }}
-              >
-                <Box
-                  sx={{
-                    position: "absolute",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    width: "100%",
-                    height: "100%",
-                    backgroundColor: teal[600],
-                    background: "linear-gradient(" + teal[900] + "," + teal[600] + ")",
-                    filter: "opacity(0)",
-                    transition: "0.2s",
-                    "&:hover": {
-                      filter: "opacity(0.9)",
-                    },
-                  }}
-                >
-                  <Box sx={{ width: "80%" }}>
-                    <Typography variant="h5" sx={{ color: "white" }}>
-                      {item.title}
-                    </Typography>
-                    <Typography sx={{ color: "white" }}>{item.text}</Typography>
-                  </Box>
-                </Box>
-                <CardMedia component="img" image={item.image} alt="Sample Image" />
-              </Link>
-            ))}
-          </Box>
-        </Box>
-      </Box>
-    </MainContainer>
-  );
-};
-
 const DemosContainer = ({ isMobile }) => {
   const theme = useTheme();
 
@@ -325,8 +197,10 @@ const DemosContainer = ({ isMobile }) => {
     },
   ];
 
+  const [selectedItem, setSelectedItem] = useState(0);
+
   return (
-    <MainContainer height={isMobile ? "auto" : "auto"}>
+   <MainContainer height={isMobile ? "auto" : "auto"}>
       <Box
         sx={{
           display: "flex",
@@ -376,25 +250,25 @@ const DemosContainer = ({ isMobile }) => {
             }}
           >
             {items.map((item, n) => (
-              <Link
-                href={item.link}
-                sx={{
-                  position: "relative",
-                  width: "30%",
-                  height: "350px",
-                  overflow: "hidden",
-                  m: "1.065%",
-                  transition: "0.5s",
-                  transform: n % 3 === 1 && "scale(1.0) translate(0%, 15%)",
-                  cursor: "pointer",
-                }}
+              <Link href={item.link}
+              sx={{
+                position: "relative",
+                width: "30%",
+                height: "350px",
+                overflow: "hidden",
+                m: "1.065%",
+                transition: "0.5s",
+                transform: n % 3 === 1 && "scale(1.0) translate(0%, 15%)",
+                cursor: "pointer",
+              }}
               >
+             
                 <Box
                   sx={{
                     position: "absolute",
                     display: "flex",
                     justifyContent: "center",
-                    alignItems: "center",
+                    alignItems:"center",
                     width: "100%",
                     height: "100%",
                     backgroundColor: teal[600],
@@ -406,10 +280,8 @@ const DemosContainer = ({ isMobile }) => {
                     },
                   }}
                 >
-                  <Box sx={{ width: "80%" }}>
-                    <Typography variant="h5" sx={{ color: "white" }}>
-                      {item.title}
-                    </Typography>
+                  <Box>
+                    <Typography variant="h5" sx={{ color: "white" }}>{item.title}</Typography>
                     <Typography sx={{ color: "white" }}>{item.text}</Typography>
                   </Box>
                 </Box>
@@ -422,6 +294,8 @@ const DemosContainer = ({ isMobile }) => {
     </MainContainer>
   );
 };
+
+
 
 const SkillsContainer = ({ isMobile }) => {
   const theme = useTheme();
@@ -584,16 +458,16 @@ const ContactContainer = ({ isMobile }) => {
       useBouncyWalls: false,
     },
     particle: {
-      particleCount: 75,
+      particleCount: 155,
       color: "white",
       minSize: 2,
-      maxSize: 1,
+      maxSize: 2,
     },
     velocity: {
-      directionAngle: -45,
-      directionAngleVariance: 60,
-      minSpeed: 0.01,
-      maxSpeed: 0.3,
+      directionAngle: 0,
+      directionAngleVariance: 30,
+      minSpeed: 0.1,
+      maxSpeed: 1,
     },
     opacity: {
       minOpacity: 0,

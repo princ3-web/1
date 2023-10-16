@@ -247,25 +247,25 @@ const DesignContainer = ({ isMobile }) => {
             }}
           >
             {items.map((item, n) => (
-              <Link
-                href={item.link}
-                sx={{
-                  position: "relative",
-                  width: "30%",
-                  height: "350px",
-                  overflow: "hidden",
-                  m: "1.065%",
-                  transition: "0.5s",
-                  transform: n % 3 === 1 && "scale(1.0) translate(0%, 15%)",
-                  cursor: "pointer",
-                }}
+              <Link href={item.link}
+              sx={{
+                position: "relative",
+                width: "30%",
+                height: "350px",
+                overflow: "hidden",
+                m: "1.065%",
+                transition: "0.5s",
+                transform: n % 3 === 1 && "scale(1.0) translate(0%, 15%)",
+                cursor: "pointer",
+              }}
               >
+             
                 <Box
                   sx={{
                     position: "absolute",
                     display: "flex",
                     justifyContent: "center",
-                    alignItems: "center",
+                    alignItems:"center",
                     width: "100%",
                     height: "100%",
                     backgroundColor: teal[600],
@@ -277,10 +277,8 @@ const DesignContainer = ({ isMobile }) => {
                     },
                   }}
                 >
-                  <Box sx={{ width: "80%" }}>
-                    <Typography variant="h5" sx={{ color: "white" }}>
-                      {item.title}
-                    </Typography>
+                  <Box>
+                    <Typography variant="h5" sx={{ color: "white" }}>{item.title}</Typography>
                     <Typography sx={{ color: "white" }}>{item.text}</Typography>
                   </Box>
                 </Box>
@@ -325,8 +323,10 @@ const DemosContainer = ({ isMobile }) => {
     },
   ];
 
+  const [selectedItem, setSelectedItem] = useState(0);
+
   return (
-    <MainContainer height={isMobile ? "auto" : "auto"}>
+   <MainContainer height={isMobile ? "auto" : "auto"}>
       <Box
         sx={{
           display: "flex",
@@ -376,25 +376,25 @@ const DemosContainer = ({ isMobile }) => {
             }}
           >
             {items.map((item, n) => (
-              <Link
-                href={item.link}
-                sx={{
-                  position: "relative",
-                  width: "30%",
-                  height: "350px",
-                  overflow: "hidden",
-                  m: "1.065%",
-                  transition: "0.5s",
-                  transform: n % 3 === 1 && "scale(1.0) translate(0%, 15%)",
-                  cursor: "pointer",
-                }}
+              <Link href={item.link}
+              sx={{
+                position: "relative",
+                width: "30%",
+                height: "350px",
+                overflow: "hidden",
+                m: "1.065%",
+                transition: "0.5s",
+                transform: n % 3 === 1 && "scale(1.0) translate(0%, 15%)",
+                cursor: "pointer",
+              }}
               >
+             
                 <Box
                   sx={{
                     position: "absolute",
                     display: "flex",
                     justifyContent: "center",
-                    alignItems: "center",
+                    alignItems:"center",
                     width: "100%",
                     height: "100%",
                     backgroundColor: teal[600],
@@ -406,10 +406,8 @@ const DemosContainer = ({ isMobile }) => {
                     },
                   }}
                 >
-                  <Box sx={{ width: "80%" }}>
-                    <Typography variant="h5" sx={{ color: "white" }}>
-                      {item.title}
-                    </Typography>
+                  <Box>
+                    <Typography variant="h5" sx={{ color: "white" }}>{item.title}</Typography>
                     <Typography sx={{ color: "white" }}>{item.text}</Typography>
                   </Box>
                 </Box>
@@ -584,16 +582,16 @@ const ContactContainer = ({ isMobile }) => {
       useBouncyWalls: false,
     },
     particle: {
-      particleCount: 75,
+      particleCount: 155,
       color: "white",
       minSize: 2,
-      maxSize: 1,
+      maxSize: 2,
     },
     velocity: {
-      directionAngle: -45,
-      directionAngleVariance: 60,
-      minSpeed: 0.01,
-      maxSpeed: 0.3,
+      directionAngle: 0,
+      directionAngleVariance: 30,
+      minSpeed: 0.1,
+      maxSpeed: 1,
     },
     opacity: {
       minOpacity: 0,
