@@ -360,10 +360,10 @@ const DemosContainer = ({ isMobile }) => {
               Check my website projects
             </Typography>
             <Typography variant="h4" sx={{ color: teal[400], fontWeight: 600 }}>
-              showcase of websites
+              showcase of designs
             </Typography>
             <Typography sx={{ color: grey[400], fontWeight: 400, mt: 2 }}>
-              Here is my collection of websites projects.
+              Here is my collection of visual projects for websites.
             </Typography>
           </Box>
           <Box
