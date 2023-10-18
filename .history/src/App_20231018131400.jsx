@@ -65,12 +65,11 @@ const StartContainer = ({ isMobile }) => {
     "websites",
     "web design",
     "modernisation",
-    "professional websites",
+    "professional websites starting from 1299 pln",
     "Do you want a website that will meet your business goals? Your website should function swiftly and stand out from your competition? That's exactly the kind of websites I design.",
-    "- Lighting fast both on computers and phones",
-    "- Very easy to navigate",
-    "- Enhanced website visibility that attracts more traffic from clients",
-    "- Prices start at 1499 PLN, with a 20% discount for first-time clients!",
+    "- lighting fast both on computers and phones",
+    "- very easy to navigate",
+    "- enhanced website visibility that attracts more traffic from clients.",
   ];
   const theme = useTheme();
 
@@ -120,7 +119,7 @@ const StartContainer = ({ isMobile }) => {
             height: "100%",
             pl: isMobile ? "30px" : "180px",
             pr: isMobile ? "30px" : "124px",
-            pt: "150px",
+            pt: "200px",
           }}
         >
           <Box
@@ -143,23 +142,20 @@ const StartContainer = ({ isMobile }) => {
               {texts[2]}
             </Typography>
           </Box>
-          <Typography variant="h3" fontWeight={600} color={grey[100]}>
+          <Typography variant="h5" fontWeight={600} color={grey[100]}>
             {texts[3]}
           </Typography>
           <Typography color={grey[400]} sx={{ mt: "22px" }}>
             {texts[4]}
           </Typography>
-          <Typography color={grey[200]} sx={{ mt: "22px" }}>
+          <Typography color={grey[400]} sx={{ mt: "22px" }}>
             {texts[5]}
           </Typography>
-          <Typography color={grey[200]} sx={{ mt: "12px" }}>
+          <Typography color={grey[400]} sx={{ mt: "22px" }}>
             {texts[6]}
           </Typography>
-          <Typography color={grey[200]} sx={{ mt: "12px" }}>
+          <Typography color={grey[400]} sx={{ mt: "22px" }}>
             {texts[7]}
-          </Typography>
-          <Typography color={grey[200]} sx={{ mt: "12px" }}>
-            {texts[8]}
           </Typography>
         </Box>
         <Box

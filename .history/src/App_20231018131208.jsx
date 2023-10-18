@@ -67,10 +67,9 @@ const StartContainer = ({ isMobile }) => {
     "modernisation",
     "professional websites",
     "Do you want a website that will meet your business goals? Your website should function swiftly and stand out from your competition? That's exactly the kind of websites I design.",
-    "- Lighting fast both on computers and phones",
-    "- Very easy to navigate",
-    "- Enhanced website visibility that attracts more traffic from clients",
-    "- Prices start at 1499 PLN, with a 20% discount for first-time clients!",
+    "- lighting fast both on computers and phones",
+    "- very easy to navigate",
+    "- enhanced website visibility that attracts more traffic from clients.",
   ];
   const theme = useTheme();
 
@@ -120,7 +119,7 @@ const StartContainer = ({ isMobile }) => {
             height: "100%",
             pl: isMobile ? "30px" : "180px",
             pr: isMobile ? "30px" : "124px",
-            pt: "150px",
+            pt: "200px",
           }}
         >
           <Box
@@ -149,17 +148,14 @@ const StartContainer = ({ isMobile }) => {
           <Typography color={grey[400]} sx={{ mt: "22px" }}>
             {texts[4]}
           </Typography>
-          <Typography color={grey[200]} sx={{ mt: "22px" }}>
+          <Typography color={grey[400]} sx={{ mt: "22px" }}>
             {texts[5]}
           </Typography>
-          <Typography color={grey[200]} sx={{ mt: "12px" }}>
+          <Typography color={grey[400]} sx={{ mt: "22px" }}>
             {texts[6]}
           </Typography>
-          <Typography color={grey[200]} sx={{ mt: "12px" }}>
+          <Typography color={grey[400]} sx={{ mt: "22px" }}>
             {texts[7]}
-          </Typography>
-          <Typography color={grey[200]} sx={{ mt: "12px" }}>
-            {texts[8]}
           </Typography>
         </Box>
         <Box
@@ -654,7 +650,7 @@ const ContactContainer = ({ isMobile }) => {
             Ship your new project
           </Typography>
           <Typography sx={{ color: grey[500], mt: 1 }}>
-            We're excited to discuss your project, drop us a message to get started. We offer a non-binding price estimate.
+            We're excited to discuss your project, drop us a message to get started.
           </Typography>
 
           <Button

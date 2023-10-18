@@ -67,10 +67,10 @@ const StartContainer = ({ isMobile }) => {
     "modernisation",
     "professional websites",
     "Do you want a website that will meet your business goals? Your website should function swiftly and stand out from your competition? That's exactly the kind of websites I design.",
-    "- Lighting fast both on computers and phones",
-    "- Very easy to navigate",
-    "- Enhanced website visibility that attracts more traffic from clients",
-    "- Prices start at 1499 PLN, with a 20% discount for first-time clients!",
+    "- lighting fast both on computers and phones",
+    "- very easy to navigate",
+    "- enhanced website visibility that attracts more traffic from clients",
+    "- prices starting at 1499 pln (20% discount for first time clients!)",
   ];
   const theme = useTheme();
 
@@ -149,7 +149,7 @@ const StartContainer = ({ isMobile }) => {
           <Typography color={grey[400]} sx={{ mt: "22px" }}>
             {texts[4]}
           </Typography>
-          <Typography color={grey[200]} sx={{ mt: "22px" }}>
+          <Typography color={grey[200]} sx={{ mt: "12px" }}>
             {texts[5]}
           </Typography>
           <Typography color={grey[200]} sx={{ mt: "12px" }}>

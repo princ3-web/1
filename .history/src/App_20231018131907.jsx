@@ -67,7 +67,7 @@ const StartContainer = ({ isMobile }) => {
     "modernisation",
     "professional websites",
     "Do you want a website that will meet your business goals? Your website should function swiftly and stand out from your competition? That's exactly the kind of websites I design.",
-    "- Lighting fast both on computers and phones",
+    "- lighting fast both on computers and phones",
     "- Very easy to navigate",
     "- Enhanced website visibility that attracts more traffic from clients",
     "- Prices start at 1499 PLN, with a 20% discount for first-time clients!",
