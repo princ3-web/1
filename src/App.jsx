@@ -19,6 +19,7 @@ import image4 from "../src/assets/images/4.png";
 import image5 from "../src/assets/images/5.png";
 import image6 from "../src/assets/images/6.png";
 import image7 from "../src/assets/images/7.png";
+import image8 from "../src/assets/images/8.png";
 import github from "../src/assets/icons/github.png";
 import react from "../src/assets/icons/react.png";
 import mui from "../src/assets/icons/mui.png";
@@ -298,6 +299,12 @@ const DemosContainer = ({ isMobile }) => {
   const theme = useTheme();
 
   const items = [
+    {
+      title: "Wedding photographer",
+      text: "Website project for wedding photographer.",
+      image: image8,
+      link: "https://princ3-web.github.io/4/",
+    },
     {
       title: "Steam clone",
       text: "Precise clone of popular digital distribution website.",
