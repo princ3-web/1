@@ -65,8 +65,11 @@ const StartContainer = ({ isMobile }) => {
     "websites",
     "web design",
     "modernisation",
-    "websites for business",
-    "Turning visions into reality, I specialize in crafting custom websites that mirror your identity, as well as bringing blueprint projects to life.",
+    "professional websites",
+    "Do you want a website that will meet your business goals? Your website should function swiftly and stand out from your competition? That's exactly the kind of websites I design.",
+    "- lighting fast both on computers and phones",
+    "- very easy to navigate",
+    "- enhanced website visibility that attracts more traffic from clients.",
   ];
   const theme = useTheme();
 
@@ -124,7 +127,7 @@ const StartContainer = ({ isMobile }) => {
               display: "flex",
               flexDirection: isMobile ? "column" : "row",
               alignItems: isMobile ? "flex-start" : "center",
-              justifyContent: "space-between",
+              justifyContent: "space-evenly",
               boxSizing: "border-box",
               pr: "80px",
             }}
@@ -142,8 +145,17 @@ const StartContainer = ({ isMobile }) => {
           <Typography variant="h3" fontWeight={600} color={grey[100]}>
             {texts[3]}
           </Typography>
-          <Typography color={grey[400]} sx={{ mt: "32px" }}>
+          <Typography color={grey[400]} sx={{ mt: "22px" }}>
             {texts[4]}
+          </Typography>
+          <Typography color={grey[400]} sx={{ mt: "22px" }}>
+            {texts[5]}
+          </Typography>
+          <Typography color={grey[400]} sx={{ mt: "22px" }}>
+            {texts[6]}
+          </Typography>
+          <Typography color={grey[400]} sx={{ mt: "22px" }}>
+            {texts[7]}
           </Typography>
         </Box>
         <Box
