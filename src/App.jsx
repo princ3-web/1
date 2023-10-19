@@ -8,7 +8,6 @@ import { grey, blueGrey, teal, blue } from "@mui/material/colors";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import Calendar from "./components/Calendar";
-import GitHubIcon from "@mui/icons-material/GitHub";
 import { useTheme } from "@mui/material";
 import { CardMedia } from "@mui/material";
 import image0 from "../src/assets/images/0.png";
@@ -20,6 +19,7 @@ import image5 from "../src/assets/images/5.png";
 import image6 from "../src/assets/images/6.png";
 import image7 from "../src/assets/images/7.png";
 import image8 from "../src/assets/images/8.png";
+import image9 from "../src/assets/images/9.png";
 import github from "../src/assets/icons/github.png";
 import react from "../src/assets/icons/react.png";
 import mui from "../src/assets/icons/mui.png";
@@ -42,11 +42,11 @@ const App = () => {
           <Navbar isMobile={isMobile} />
         </Element>
         <StartContainer isMobile={isMobile} />
-        <Element name="designs">
-          <DesignContainer isMobile={isMobile} />
-        </Element>
         <Element name="demos">
           <DemosContainer isMobile={isMobile} />
+        </Element>
+        <Element name="designs">
+          <DesignContainer isMobile={isMobile} />
         </Element>
         <Element name="skills">
           <SkillsContainer isMobile={isMobile} />
@@ -123,26 +123,6 @@ const StartContainer = ({ isMobile }) => {
             pt: "150px",
           }}
         >
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: isMobile ? "column" : "row",
-              alignItems: isMobile ? "flex-start" : "center",
-              justifyContent: "space-evenly",
-              boxSizing: "border-box",
-              pr: "80px",
-            }}
-          >
-            <Typography variant="h6" fontWeight={100} color={teal[600]}>
-              {texts[0]}
-            </Typography>
-            <Typography variant="h6" fontWeight={100} color={teal[600]}>
-              {texts[1]}
-            </Typography>
-            <Typography variant="h6" fontWeight={100} color={teal[600]}>
-              {texts[2]}
-            </Typography>
-          </Box>
           <Typography variant="h3" fontWeight={600} color={grey[100]}>
             {texts[3]}
           </Typography>
@@ -177,6 +157,147 @@ const StartContainer = ({ isMobile }) => {
           }}
         >
           <Calendar />
+        </Box>
+      </Box>
+    </MainContainer>
+  );
+};
+
+const DemosContainer = ({ isMobile }) => {
+  const theme = useTheme();
+
+  const items = [
+    {
+      title: "Yoga classes instructor",
+      text: "Website for yoga classes instructor.",
+      image: image9,
+      link: "https://princ3-web.github.io/5/",
+    },
+    {
+      title: "Wedding photographer",
+      text: "Website for wedding photographer.",
+      image: image8,
+      link: "https://princ3-web.github.io/4/",
+    },
+    {
+      title: "Steam clone",
+      text: "Precise clone of popular digital distribution website.",
+      image: image0,
+      link: "https://princ3-web.github.io/steamclone/",
+    },
+    {
+      title: "Design software",
+      text: "A design software website with intuitive navigation and an aesthetically pleasing interface.",
+      image: image1,
+      link: "https://princ3-web.github.io/designstudio/",
+    },
+    {
+      title: "Academy",
+      text: "Online academy website seamlessly blending aesthetic appeal with user-friendly functionality.",
+      image: image2,
+      link: "https://princ3-web.github.io/academy/",
+    },
+
+    {
+      title: "Tik-tok style app",
+      text: "TikTok-style app with a captivating design and seamless user interactions.",
+      image: image3,
+      link: "https://princ3-web.github.io/quicktok/",
+    },
+  ];
+
+  return (
+    <MainContainer height={isMobile ? "auto" : "auto"}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "flex-start",
+          position: "relative",
+          height: "100%",
+          pb: isMobile ? "40px" : "40px",
+          background:
+            "linear-gradient(" +
+            theme.palette.customTeal[800] +
+            "," +
+            theme.palette.customTeal[700] +
+            ")",
+        }}
+      >
+        <Box
+          sx={{
+            width: "100%",
+            height: "100%",
+            pl: isMobile ? "30px" : "180px",
+            pr: isMobile ? "30px" : "90px",
+            pt: "116px",
+            boxSizing: "border-box",
+          }}
+        >
+          <Box>
+            <Typography sx={{ color: teal[400], fontWeight: 600, mb: 1 }}>
+              Website projects
+            </Typography>
+            <Typography variant="h4" sx={{ color: grey[100], fontWeight: 600 }}>
+              Check my website projects
+            </Typography>
+            <Typography variant="h4" sx={{ color: teal[400], fontWeight: 600 }}>
+              showcase of websites
+            </Typography>
+            <Typography sx={{ color: grey[400], fontWeight: 400, mt: 2 }}>
+              Here is my collection of websites projects.
+            </Typography>
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              flexWrap: "wrap",
+              justifyContent: "flex-start",
+              my: "90px",
+            }}
+          >
+            {items.map((item, n) => (
+              <Link
+                href={item.link}
+                sx={{
+                  position: "relative",
+                  width: "30%",
+                  height: "350px",
+                  overflow: "hidden",
+                  m: "1.065%",
+                  transition: "0.5s",
+                  transform: n % 3 === 1 && "scale(1.0) translate(0%, 15%)",
+                  cursor: "pointer",
+                }}
+              >
+                <Box
+                  sx={{
+                    position: "absolute",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    width: "100%",
+                    height: "100%",
+                    backgroundColor: teal[600],
+                    background: "linear-gradient(" + teal[900] + "," + teal[600] + ")",
+                    filter: "opacity(0)",
+                    transition: "0.2s",
+                    "&:hover": {
+                      filter: "opacity(0.9)",
+                    },
+                  }}
+                >
+                  <Box sx={{ width: "80%" }}>
+                    <Typography variant="h5" sx={{ color: "white" }}>
+                      {item.title}
+                    </Typography>
+                    <Typography sx={{ color: "white" }}>{item.text}</Typography>
+                  </Box>
+                </Box>
+                <CardMedia component="img" image={item.image} alt="Sample Image" />
+              </Link>
+            ))}
+          </Box>
         </Box>
       </Box>
     </MainContainer>
@@ -252,141 +373,6 @@ const DesignContainer = ({ isMobile }) => {
             </Typography>
             <Typography sx={{ color: grey[400], fontWeight: 400, mt: 2 }}>
               Here is my collection of visual projects for websites.
-            </Typography>
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              flexWrap: "wrap",
-              justifyContent: "flex-start",
-              my: "90px",
-            }}
-          >
-            {items.map((item, n) => (
-              <Link
-                href={item.link}
-                sx={{
-                  position: "relative",
-                  width: "30%",
-                  height: "350px",
-                  overflow: "hidden",
-                  m: "1.065%",
-                  transition: "0.5s",
-                  transform: n % 3 === 1 && "scale(1.0) translate(0%, 15%)",
-                  cursor: "pointer",
-                }}
-              >
-                <Box
-                  sx={{
-                    position: "absolute",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    width: "100%",
-                    height: "100%",
-                    backgroundColor: teal[600],
-                    background: "linear-gradient(" + teal[900] + "," + teal[600] + ")",
-                    filter: "opacity(0)",
-                    transition: "0.2s",
-                    "&:hover": {
-                      filter: "opacity(0.9)",
-                    },
-                  }}
-                >
-                  <Box sx={{ width: "80%" }}>
-                    <Typography variant="h5" sx={{ color: "white" }}>
-                      {item.title}
-                    </Typography>
-                    <Typography sx={{ color: "white" }}>{item.text}</Typography>
-                  </Box>
-                </Box>
-                <CardMedia component="img" image={item.image} alt="Sample Image" />
-              </Link>
-            ))}
-          </Box>
-        </Box>
-      </Box>
-    </MainContainer>
-  );
-};
-
-const DemosContainer = ({ isMobile }) => {
-  const theme = useTheme();
-
-  const items = [
-    {
-      title: "Wedding photographer",
-      text: "Website project for wedding photographer.",
-      image: image8,
-      link: "https://princ3-web.github.io/4/",
-    },
-    {
-      title: "Steam clone",
-      text: "Precise clone of popular digital distribution website.",
-      image: image0,
-      link: "https://princ3-web.github.io/steamclone/",
-    },
-    {
-      title: "Design software",
-      text: "A design software website with intuitive navigation and an aesthetically pleasing interface.",
-      image: image1,
-      link: "https://princ3-web.github.io/designstudio/",
-    },
-    {
-      title: "Academy",
-      text: "Online academy website seamlessly blending aesthetic appeal with user-friendly functionality.",
-      image: image2,
-      link: "https://princ3-web.github.io/academy/",
-    },
-
-    {
-      title: "Tik-tok style app",
-      text: "TikTok-style app with a captivating design and seamless user interactions.",
-      image: image3,
-      link: "https://princ3-web.github.io/quicktok/",
-    },
-  ];
-
-  return (
-    <MainContainer height={isMobile ? "auto" : "auto"}>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "flex-start",
-          position: "relative",
-          height: "100%",
-          pb: isMobile ? "40px" : "40px",
-          background:
-            "linear-gradient(" +
-            theme.palette.customTeal[800] +
-            "," +
-            theme.palette.customTeal[700] +
-            ")",
-        }}
-      >
-        <Box
-          sx={{
-            width: "100%",
-            height: "100%",
-            pl: isMobile ? "30px" : "180px",
-            pr: isMobile ? "30px" : "90px",
-            pt: "116px",
-            boxSizing: "border-box",
-          }}
-        >
-          <Box>
-            <Typography sx={{ color: teal[400], fontWeight: 600, mb: 1 }}>
-              Website projects
-            </Typography>
-            <Typography variant="h4" sx={{ color: grey[100], fontWeight: 600 }}>
-              Check my website projects
-            </Typography>
-            <Typography variant="h4" sx={{ color: teal[400], fontWeight: 600 }}>
-              showcase of websites
-            </Typography>
-            <Typography sx={{ color: grey[400], fontWeight: 400, mt: 2 }}>
-              Here is my collection of websites projects.
             </Typography>
           </Box>
           <Box
@@ -654,7 +640,8 @@ const ContactContainer = ({ isMobile }) => {
             Ship your new project
           </Typography>
           <Typography sx={{ color: grey[500], mt: 1 }}>
-            We're excited to discuss your project, drop us a message to get started. We offer a non-binding price estimate.
+            We're excited to discuss your project, drop us a message to get started. We offer a
+            non-binding price estimate.
           </Typography>
 
           <Button
