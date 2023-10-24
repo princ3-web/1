@@ -20,6 +20,7 @@ import image6 from "../src/assets/images/6.png";
 import image7 from "../src/assets/images/7.png";
 import image8 from "../src/assets/images/8.png";
 import image9 from "../src/assets/images/9.png";
+import image10 from "../src/assets/images/10.png";
 import github from "../src/assets/icons/github.png";
 import react from "../src/assets/icons/react.png";
 import mui from "../src/assets/icons/mui.png";
@@ -168,6 +169,12 @@ const DemosContainer = ({ isMobile }) => {
 
   const items = [
     {
+      title: "Harry Styles website",
+      text: "Singer and songwriter website project.",
+      image: image10,
+      link: "https://princ3-web.github.io/6/",
+    },
+    {
       title: "Yoga classes instructor",
       text: "Website for yoga classes instructor.",
       image: image9,
@@ -191,13 +198,6 @@ const DemosContainer = ({ isMobile }) => {
       image: image1,
       link: "https://princ3-web.github.io/designstudio/",
     },
-    {
-      title: "Academy",
-      text: "Online academy website seamlessly blending aesthetic appeal with user-friendly functionality.",
-      image: image2,
-      link: "https://princ3-web.github.io/academy/",
-    },
-
     {
       title: "Tik-tok style app",
       text: "TikTok-style app with a captivating design and seamless user interactions.",
