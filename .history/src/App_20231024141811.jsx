@@ -260,9 +260,10 @@ const DemosContainer = ({ isMobile }) => {
                   transform: n % 3 === 1 && "scale(1.0) translate(0%, 15%)",
                   cursor: "pointer",
                   width: "30%",
+                  height: "350px",
                 }}
               >
-                <Animated style={{position: "relative", width:"100%", height:"350px"}}>
+                <Animated style={{position: "relative", width:"100%", heig}}>
                   <Box
                     sx={{
                       position: "absolute",

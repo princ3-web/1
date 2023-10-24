@@ -252,17 +252,10 @@ const DemosContainer = ({ isMobile }) => {
               <Link
                 href={item.link}
                 sx={{
-                  position: "relative",
-
-                  overflow: "hidden",
-                  m: "1.065%",
-                  transition: "0.5s",
-                  transform: n % 3 === 1 && "scale(1.0) translate(0%, 15%)",
-                  cursor: "pointer",
-                  width: "30%",
+            
                 }}
               >
-                <Animated style={{position: "relative", width:"100%", height:"350px"}}>
+                <Animated s>
                   <Box
                     sx={{
                       position: "absolute",
