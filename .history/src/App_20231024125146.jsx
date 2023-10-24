@@ -370,29 +370,30 @@ const DesignContainer = ({ isMobile }) => {
             </Typography>
           </Box>
           <Animated>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "row",
-                flexWrap: "wrap",
-                justifyContent: "flex-start",
-                my: "90px",
-              }}
-            >
-              {items.map((item, n) => (
-                <Link
-                  href={item.link}
-                  sx={{
-                    position: "relative",
-                    width: "30%",
-                    height: "350px",
-                    overflow: "hidden",
-                    m: "1.065%",
-                    transition: "0.5s",
-                    transform: n % 3 === 1 && "scale(1.0) translate(0%, 15%)",
-                    cursor: "pointer",
-                  }}
-                >
+
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              flexWrap: "wrap",
+              justifyContent: "flex-start",
+              my: "90px",
+            }}
+          >
+            {items.map((item, n) => (
+              <Link
+                href={item.link}
+                sx={{
+                  position: "relative",
+                  width: "30%",
+                  height: "350px",
+                  overflow: "hidden",
+                  m: "1.065%",
+                  transition: "0.5s",
+                  transform: n % 3 === 1 && "scale(1.0) translate(0%, 15%)",
+                  cursor: "pointer",
+                }}
+              >
                   <Box
                     sx={{
                       position: "absolute",
@@ -418,10 +419,11 @@ const DesignContainer = ({ isMobile }) => {
                     </Box>
                   </Box>
                   <CardMedia component="img" image={item.image} alt="Sample Image" />
-                </Link>
-              ))}
-            </Box>
+              </Link>
+            ))}
+          </Box>
           </Animated>
+
         </Box>
       </Box>
     </MainContainer>

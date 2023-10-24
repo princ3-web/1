@@ -32,7 +32,6 @@ import { useMediaQuery } from "@material-ui/core";
 import { Link } from "@mui/material";
 import { Element } from "react-scroll";
 import ParticleBackground from "react-particle-backgrounds";
-import Animated from "./components/Animated";
 
 const App = () => {
   const isMobile = useMediaQuery("(max-width: 700px)");
@@ -63,6 +62,14 @@ const App = () => {
 };
 
 const StartContainer = ({ isMobile }) => {
+  const texts = [
+    "professional websites",
+    "Do you want a website that will meet your business goals? Your website should function swiftly and stand out from your competition? That's exactly the kind of websites I design.",
+    "- Lighting fast both on computers and phones",
+    "- Very easy to navigate",
+    "- Enhanced website visibility that attracts more traffic from clients",
+    "- Prices start at 1499 PLN, with a 20% discount for first-time clients!",
+  ];
   const theme = useTheme();
 
   const settings = {
@@ -115,24 +122,22 @@ const StartContainer = ({ isMobile }) => {
           }}
         >
           <Typography variant="h3" fontWeight={600} color={grey[100]}>
-            professional websites
+            {texts[3]}
           </Typography>
           <Typography color={grey[400]} sx={{ mt: "22px" }}>
-            Do you want a website that will meet your business goals? Your website should function
-            swiftly and stand out from your competition? That's exactly the kind of websites I
-            design.
+            {texts[4]}
           </Typography>
           <Typography color={grey[200]} sx={{ mt: "22px" }}>
-            - Lighting fast both on computers and phones
+            {texts[5]}
           </Typography>
           <Typography color={grey[200]} sx={{ mt: "12px" }}>
-            - Very easy to navigate
+            {texts[6]}
           </Typography>
           <Typography color={grey[200]} sx={{ mt: "12px" }}>
-            - Enhanced website visibility that attracts more traffic from clients
+            {texts[7]}
           </Typography>
           <Typography color={grey[200]} sx={{ mt: "12px" }}>
-            - Prices start at 1499 PLN, with a 20% discount for first-time clients!
+            {texts[8]}
           </Typography>
         </Box>
         <Box
@@ -262,33 +267,31 @@ const DemosContainer = ({ isMobile }) => {
                   cursor: "pointer",
                 }}
               >
-                <Animated>
-                  <Box
-                    sx={{
-                      position: "absolute",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      width: "100%",
-                      height: "100%",
-                      backgroundColor: teal[600],
-                      background: "linear-gradient(" + teal[900] + "," + teal[600] + ")",
-                      filter: "opacity(0)",
-                      transition: "0.2s",
-                      "&:hover": {
-                        filter: "opacity(0.9)",
-                      },
-                    }}
-                  >
-                    <Box sx={{ width: "80%" }}>
-                      <Typography variant="h5" sx={{ color: "white" }}>
-                        {item.title}
-                      </Typography>
-                      <Typography sx={{ color: "white" }}>{item.text}</Typography>
-                    </Box>
+                <Box
+                  sx={{
+                    position: "absolute",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    width: "100%",
+                    height: "100%",
+                    backgroundColor: teal[600],
+                    background: "linear-gradient(" + teal[900] + "," + teal[600] + ")",
+                    filter: "opacity(0)",
+                    transition: "0.2s",
+                    "&:hover": {
+                      filter: "opacity(0.9)",
+                    },
+                  }}
+                >
+                  <Box sx={{ width: "80%" }}>
+                    <Typography variant="h5" sx={{ color: "white" }}>
+                      {item.title}
+                    </Typography>
+                    <Typography sx={{ color: "white" }}>{item.text}</Typography>
                   </Box>
-                  <CardMedia component="img" image={item.image} alt="Sample Image" />
-                </Animated>
+                </Box>
+                <CardMedia component="img" image={item.image} alt="Sample Image" />
               </Link>
             ))}
           </Box>
@@ -369,59 +372,57 @@ const DesignContainer = ({ isMobile }) => {
               Here is my collection of visual projects for websites.
             </Typography>
           </Box>
-          <Animated>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "row",
-                flexWrap: "wrap",
-                justifyContent: "flex-start",
-                my: "90px",
-              }}
-            >
-              {items.map((item, n) => (
-                <Link
-                  href={item.link}
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              flexWrap: "wrap",
+              justifyContent: "flex-start",
+              my: "90px",
+            }}
+          >
+            {items.map((item, n) => (
+              <Link
+                href={item.link}
+                sx={{
+                  position: "relative",
+                  width: "30%",
+                  height: "350px",
+                  overflow: "hidden",
+                  m: "1.065%",
+                  transition: "0.5s",
+                  transform: n % 3 === 1 && "scale(1.0) translate(0%, 15%)",
+                  cursor: "pointer",
+                }}
+              >
+                <Box
                   sx={{
-                    position: "relative",
-                    width: "30%",
-                    height: "350px",
-                    overflow: "hidden",
-                    m: "1.065%",
-                    transition: "0.5s",
-                    transform: n % 3 === 1 && "scale(1.0) translate(0%, 15%)",
-                    cursor: "pointer",
+                    position: "absolute",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    width: "100%",
+                    height: "100%",
+                    backgroundColor: teal[600],
+                    background: "linear-gradient(" + teal[900] + "," + teal[600] + ")",
+                    filter: "opacity(0)",
+                    transition: "0.2s",
+                    "&:hover": {
+                      filter: "opacity(0.9)",
+                    },
                   }}
                 >
-                  <Box
-                    sx={{
-                      position: "absolute",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      width: "100%",
-                      height: "100%",
-                      backgroundColor: teal[600],
-                      background: "linear-gradient(" + teal[900] + "," + teal[600] + ")",
-                      filter: "opacity(0)",
-                      transition: "0.2s",
-                      "&:hover": {
-                        filter: "opacity(0.9)",
-                      },
-                    }}
-                  >
-                    <Box sx={{ width: "80%" }}>
-                      <Typography variant="h5" sx={{ color: "white" }}>
-                        {item.title}
-                      </Typography>
-                      <Typography sx={{ color: "white" }}>{item.text}</Typography>
-                    </Box>
+                  <Box sx={{ width: "80%" }}>
+                    <Typography variant="h5" sx={{ color: "white" }}>
+                      {item.title}
+                    </Typography>
+                    <Typography sx={{ color: "white" }}>{item.text}</Typography>
                   </Box>
-                  <CardMedia component="img" image={item.image} alt="Sample Image" />
-                </Link>
-              ))}
-            </Box>
-          </Animated>
+                </Box>
+                <CardMedia component="img" image={item.image} alt="Sample Image" />
+              </Link>
+            ))}
+          </Box>
         </Box>
       </Box>
     </MainContainer>

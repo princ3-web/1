@@ -63,6 +63,7 @@ const App = () => {
 };
 
 const StartContainer = ({ isMobile }) => {
+
   const theme = useTheme();
 
   const settings = {
@@ -104,6 +105,7 @@ const StartContainer = ({ isMobile }) => {
         <Box sx={{ position: "absolute", height: "100%", width: "100vw" }}>
           <ParticleBackground settings={settings} />
         </Box>
+        <Animated>
         <Box
           sx={{
             boxSizing: "border-box",
@@ -115,24 +117,22 @@ const StartContainer = ({ isMobile }) => {
           }}
         >
           <Typography variant="h3" fontWeight={600} color={grey[100]}>
-            professional websites
+          professional websites
           </Typography>
           <Typography color={grey[400]} sx={{ mt: "22px" }}>
-            Do you want a website that will meet your business goals? Your website should function
-            swiftly and stand out from your competition? That's exactly the kind of websites I
-            design.
+          Do you want a website that will meet your business goals? Your website should function swiftly and stand out from your competition? That's exactly the kind of websites I design.
           </Typography>
           <Typography color={grey[200]} sx={{ mt: "22px" }}>
-            - Lighting fast both on computers and phones
+          - Lighting fast both on computers and phones
           </Typography>
           <Typography color={grey[200]} sx={{ mt: "12px" }}>
-            - Very easy to navigate
+          - Very easy to navigate
           </Typography>
           <Typography color={grey[200]} sx={{ mt: "12px" }}>
-            - Enhanced website visibility that attracts more traffic from clients
+          - Enhanced website visibility that attracts more traffic from clients
           </Typography>
           <Typography color={grey[200]} sx={{ mt: "12px" }}>
-            - Prices start at 1499 PLN, with a 20% discount for first-time clients!
+          - Prices start at 1499 PLN, with a 20% discount for first-time clients!
           </Typography>
         </Box>
         <Box
@@ -262,33 +262,31 @@ const DemosContainer = ({ isMobile }) => {
                   cursor: "pointer",
                 }}
               >
-                <Animated>
-                  <Box
-                    sx={{
-                      position: "absolute",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      width: "100%",
-                      height: "100%",
-                      backgroundColor: teal[600],
-                      background: "linear-gradient(" + teal[900] + "," + teal[600] + ")",
-                      filter: "opacity(0)",
-                      transition: "0.2s",
-                      "&:hover": {
-                        filter: "opacity(0.9)",
-                      },
-                    }}
-                  >
-                    <Box sx={{ width: "80%" }}>
-                      <Typography variant="h5" sx={{ color: "white" }}>
-                        {item.title}
-                      </Typography>
-                      <Typography sx={{ color: "white" }}>{item.text}</Typography>
-                    </Box>
+                <Box
+                  sx={{
+                    position: "absolute",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    width: "100%",
+                    height: "100%",
+                    backgroundColor: teal[600],
+                    background: "linear-gradient(" + teal[900] + "," + teal[600] + ")",
+                    filter: "opacity(0)",
+                    transition: "0.2s",
+                    "&:hover": {
+                      filter: "opacity(0.9)",
+                    },
+                  }}
+                >
+                  <Box sx={{ width: "80%" }}>
+                    <Typography variant="h5" sx={{ color: "white" }}>
+                      {item.title}
+                    </Typography>
+                    <Typography sx={{ color: "white" }}>{item.text}</Typography>
                   </Box>
-                  <CardMedia component="img" image={item.image} alt="Sample Image" />
-                </Animated>
+                </Box>
+                <CardMedia component="img" image={item.image} alt="Sample Image" />
               </Link>
             ))}
           </Box>
@@ -369,59 +367,57 @@ const DesignContainer = ({ isMobile }) => {
               Here is my collection of visual projects for websites.
             </Typography>
           </Box>
-          <Animated>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "row",
-                flexWrap: "wrap",
-                justifyContent: "flex-start",
-                my: "90px",
-              }}
-            >
-              {items.map((item, n) => (
-                <Link
-                  href={item.link}
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+              flexWrap: "wrap",
+              justifyContent: "flex-start",
+              my: "90px",
+            }}
+          >
+            {items.map((item, n) => (
+              <Link
+                href={item.link}
+                sx={{
+                  position: "relative",
+                  width: "30%",
+                  height: "350px",
+                  overflow: "hidden",
+                  m: "1.065%",
+                  transition: "0.5s",
+                  transform: n % 3 === 1 && "scale(1.0) translate(0%, 15%)",
+                  cursor: "pointer",
+                }}
+              >
+                <Box
                   sx={{
-                    position: "relative",
-                    width: "30%",
-                    height: "350px",
-                    overflow: "hidden",
-                    m: "1.065%",
-                    transition: "0.5s",
-                    transform: n % 3 === 1 && "scale(1.0) translate(0%, 15%)",
-                    cursor: "pointer",
+                    position: "absolute",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    width: "100%",
+                    height: "100%",
+                    backgroundColor: teal[600],
+                    background: "linear-gradient(" + teal[900] + "," + teal[600] + ")",
+                    filter: "opacity(0)",
+                    transition: "0.2s",
+                    "&:hover": {
+                      filter: "opacity(0.9)",
+                    },
                   }}
                 >
-                  <Box
-                    sx={{
-                      position: "absolute",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      width: "100%",
-                      height: "100%",
-                      backgroundColor: teal[600],
-                      background: "linear-gradient(" + teal[900] + "," + teal[600] + ")",
-                      filter: "opacity(0)",
-                      transition: "0.2s",
-                      "&:hover": {
-                        filter: "opacity(0.9)",
-                      },
-                    }}
-                  >
-                    <Box sx={{ width: "80%" }}>
-                      <Typography variant="h5" sx={{ color: "white" }}>
-                        {item.title}
-                      </Typography>
-                      <Typography sx={{ color: "white" }}>{item.text}</Typography>
-                    </Box>
+                  <Box sx={{ width: "80%" }}>
+                    <Typography variant="h5" sx={{ color: "white" }}>
+                      {item.title}
+                    </Typography>
+                    <Typography sx={{ color: "white" }}>{item.text}</Typography>
                   </Box>
-                  <CardMedia component="img" image={item.image} alt="Sample Image" />
-                </Link>
-              ))}
-            </Box>
-          </Animated>
+                </Box>
+                <CardMedia component="img" image={item.image} alt="Sample Image" />
+              </Link>
+            ))}
+          </Box>
         </Box>
       </Box>
     </MainContainer>
