@@ -592,13 +592,13 @@ const ContactContainer = ({ isMobile }) => {
       particleCount: 75,
       color: "white",
       minSize: 2,
-      maxSize: 0,
+      maxSize: 1,
     },
     velocity: {
-      directionAngle: 0,
-      directionAngleVariance: 0,
+      directionAngle: -45,
+      directionAngleVariance: 60,
       minSpeed: 0.01,
-      maxSpeed: 2,
+      maxSpeed: 0.3,
     },
     opacity: {
       minOpacity: 0,
@@ -681,7 +681,7 @@ const ContactContainer = ({ isMobile }) => {
             component="img"
             image={mainImage}
             alt="Sample Image"
-            sx={{ objectFit: "cover", borderRadius:"100%", border:"2px solid " + grey[800] }}
+            sx={{ objectFit: "cover", bord }}
           />
         </Box>
       </Box>

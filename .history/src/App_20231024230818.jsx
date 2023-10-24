@@ -595,10 +595,10 @@ const ContactContainer = ({ isMobile }) => {
       maxSize: 0,
     },
     velocity: {
-      directionAngle: 0,
-      directionAngleVariance: 0,
+      directionAngle: 180,
+      directionAngleVariance: 20,
       minSpeed: 0.01,
-      maxSpeed: 2,
+      maxSpeed: 3,
     },
     opacity: {
       minOpacity: 0,
