@@ -21,7 +21,6 @@ import image7 from "../src/assets/images/7.png";
 import image8 from "../src/assets/images/8.png";
 import image9 from "../src/assets/images/9.png";
 import image10 from "../src/assets/images/10.png";
-import image11 from "../src/assets/images/11.png";
 import github from "../src/assets/icons/github.png";
 import react from "../src/assets/icons/react.png";
 import mui from "../src/assets/icons/mui.png";
@@ -162,9 +161,9 @@ const DemosContainer = ({ isMobile }) => {
 
   const items = [
     {
-      title: "Marvel's Spider-Man official website project",
-      text: "Website project for PS5 and PC game.",
-      image: image11,
+      title: "Marvel's Spider-Man official website ",
+      text: "Singer and songwriter website project.",
+      image: image10,
       link: "https://princ3-web.github.io/7/",
     },
     {
@@ -269,7 +268,7 @@ const DemosContainer = ({ isMobile }) => {
                   width: "30%",
                 }}
               >
-                <Animated style={{ position: "relative", width: "100%", height: "300px" }}>
+                <Animated style={{position: "relative", width:"100%", height:"350px"}}>
                   <Box
                     sx={{
                       position: "absolute",
@@ -688,7 +687,7 @@ const ContactContainer = ({ isMobile }) => {
             component="img"
             image={mainImage}
             alt="Sample Image"
-            sx={{ objectFit: "cover", borderRadius: "100%", border: "2px solid " + grey[800] }}
+            sx={{ objectFit: "cover", borderRadius:"100%", border:"2px solid " + grey[800] }}
           />
         </Box>
       </Box>

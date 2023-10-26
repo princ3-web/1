@@ -21,7 +21,6 @@ import image7 from "../src/assets/images/7.png";
 import image8 from "../src/assets/images/8.png";
 import image9 from "../src/assets/images/9.png";
 import image10 from "../src/assets/images/10.png";
-import image11 from "../src/assets/images/11.png";
 import github from "../src/assets/icons/github.png";
 import react from "../src/assets/icons/react.png";
 import mui from "../src/assets/icons/mui.png";
@@ -269,7 +268,7 @@ const DemosContainer = ({ isMobile }) => {
                   width: "30%",
                 }}
               >
-                <Animated style={{ position: "relative", width: "100%", height: "300px" }}>
+                <Animated style={{ position: "relative", width: "100%", height: "350px" }}>
                   <Box
                     sx={{
                       position: "absolute",
