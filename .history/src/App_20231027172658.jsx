@@ -120,7 +120,7 @@ const StartContainer = ({ isMobile }) => {
             height: "100%",
             pl: isMobile ? "30px" : "180px",
             pr: isMobile ? "30px" : "124px",
-            pt: "100px",
+            pt: "150px",
             zIndex: 1,
           }}
         >
@@ -144,35 +144,6 @@ const StartContainer = ({ isMobile }) => {
           <Typography color={grey[200]} sx={{ mt: "12px" }}>
             - Prices start at 1499 PLN, with a 20% discount for first-time clients!
           </Typography>
-
-          <Button
-            href="mailto:gornmich@gmail.com"
-            target="_blank"
-            sx={{
-              color: grey[100],
-              background:
-                "linear-gradient(to bottom," +
-                theme.palette.customTeal[300] +
-                "," +
-                theme.palette.customTeal[500] +
-                ")",
-              mt: "2rem",
-              textTransform: "none",
-              borderRadius: 2,
-              px: "3rem",
-              py: "1rem",
-              ":hover":{
-                background:
-                "linear-gradient(to bottom," +
-                theme.palette.customTeal[400] +
-                "," +
-                theme.palette.customTeal[600] +
-                ")",
-              }
-            }}
-          >
-            <Typography variant="subtitle1">Contact via e-mail </Typography>
-          </Button>
         </Box>
         <Box
           sx={{
@@ -693,7 +664,7 @@ const ContactContainer = ({ isMobile }) => {
           </Typography>
 
           <Button
-            href="mailto:gornmich@gmail.com"
+            href="mailto:mypixelwizard@gmail.com"
             target="_blank"
             sx={{
               color: grey[100],
@@ -703,11 +674,10 @@ const ContactContainer = ({ isMobile }) => {
                 "," +
                 theme.palette.customTeal[500] +
                 ")",
-              mt: "2rem",
+              mt: 2,
               textTransform: "none",
               borderRadius: 2,
-              px: "3rem",
-              py: "1rem",
+              px: 2,
               ":hover":{
                 background:
                 "linear-gradient(to bottom," +
@@ -718,7 +688,7 @@ const ContactContainer = ({ isMobile }) => {
               }
             }}
           >
-            <Typography variant="subtitle1">Contact via e-mail </Typography>
+            <Typography variant="subtitle1">Contact via e-mail &gt; </Typography>
           </Button>
         </Box>
         <Box

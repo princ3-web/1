@@ -160,7 +160,7 @@ const StartContainer = ({ isMobile }) => {
               textTransform: "none",
               borderRadius: 2,
               px: "3rem",
-              py: "1rem",
+              py: "3rem",
               ":hover":{
                 background:
                 "linear-gradient(to bottom," +
@@ -703,11 +703,10 @@ const ContactContainer = ({ isMobile }) => {
                 "," +
                 theme.palette.customTeal[500] +
                 ")",
-              mt: "2rem",
+              mt: 2,
               textTransform: "none",
               borderRadius: 2,
-              px: "3rem",
-              py: "1rem",
+              px: 2,
               ":hover":{
                 background:
                 "linear-gradient(to bottom," +

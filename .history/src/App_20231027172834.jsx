@@ -120,7 +120,7 @@ const StartContainer = ({ isMobile }) => {
             height: "100%",
             pl: isMobile ? "30px" : "180px",
             pr: isMobile ? "30px" : "124px",
-            pt: "100px",
+            pt: "0px",
             zIndex: 1,
           }}
         >
@@ -159,8 +159,7 @@ const StartContainer = ({ isMobile }) => {
               mt: "2rem",
               textTransform: "none",
               borderRadius: 2,
-              px: "3rem",
-              py: "1rem",
+              px: 2,
               ":hover":{
                 background:
                 "linear-gradient(to bottom," +
@@ -703,11 +702,10 @@ const ContactContainer = ({ isMobile }) => {
                 "," +
                 theme.palette.customTeal[500] +
                 ")",
-              mt: "2rem",
+              mt: 2,
               textTransform: "none",
               borderRadius: 2,
-              px: "3rem",
-              py: "1rem",
+              px: 2,
               ":hover":{
                 background:
                 "linear-gradient(to bottom," +
