@@ -51,9 +51,9 @@ const App = () => {
         <Element name="designs">
           <DesignContainer isMobile={isMobile} />
         </Element>
-        {/* <Element name="skills">
+        <Element name="skills">
           <SkillsContainer isMobile={isMobile} />
-        </Element> */}
+        </Element>
         <Element name="contact">
           <ContactContainer isMobile={isMobile} />
         </Element>

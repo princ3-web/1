@@ -12,7 +12,7 @@ const Bottombar = ({ isMobile }) => {
         alignItems: "flex-end",
         justifyContent: "center",
         width: "100%",
-        height: "126px",
+        height: "166px",
         backgroundColor: blueGrey[900],
         boxSizing: "border-box",
         pr: isMobile ? "40px" : "180px",

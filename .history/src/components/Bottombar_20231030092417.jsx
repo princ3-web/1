@@ -22,6 +22,7 @@ const Bottombar = ({ isMobile }) => {
         <Typography sx={{ color: grey[400], fontSize:14 }}>tel: 662 047 277</Typography>
         <Link href={"mailto:gornmich@gmail.com"} sx={{ textDecoration: "none", color: grey[400] }}>
           <Typography sx={{fontSize:14}}>e-mail: gornmich@gmail.com</Typography>
+          <Typography sx={{fontSize:14}}>e-mail: pixelwi@gmail.com</Typography>
         </Link>
       </Box>
     </Box>

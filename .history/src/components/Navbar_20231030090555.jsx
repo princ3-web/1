@@ -87,7 +87,7 @@ const Navbar = ({ isMobile }) => {
           ))}
         </Box>
 
-        {/* <Box sx={{ display: "flex" }}>
+        <Box sx={{ display: "flex" }}>
           <Box
             sx={{
               display: "flex",
@@ -123,7 +123,7 @@ const Navbar = ({ isMobile }) => {
           >
             <SettingsIcon sx={{ color: theme.palette.customTeal[300], fontSize: isMobile ? 30 : 30 }} />
           </Box>
-        </Box> */}
+        </Box>
       </Box>
       <Box sx={{ pb: "59px" }}></Box>
     </>
