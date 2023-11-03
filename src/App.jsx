@@ -5,15 +5,11 @@ import Bottombar from "./components/Bottombar";
 import MainContainer from "./components/MainContainer";
 import { Typography, Box, Button } from "@mui/material";
 import { grey, blueGrey, teal, blue } from "@mui/material/colors";
-import { LocalizationProvider } from "@mui/x-date-pickers";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import Calendar from "./components/Calendar";
+
 import { useTheme } from "@mui/material";
 import { CardMedia } from "@mui/material";
 import image0 from "../src/assets/images/0.png";
-import image1 from "../src/assets/images/1.png";
-import image2 from "../src/assets/images/2.png";
-import image3 from "../src/assets/images/3.png";
+
 import image4 from "../src/assets/images/4.png";
 import image5 from "../src/assets/images/5.png";
 import image6 from "../src/assets/images/6.png";
@@ -22,6 +18,7 @@ import image8 from "../src/assets/images/8.png";
 import image9 from "../src/assets/images/9.png";
 import image10 from "../src/assets/images/10.png";
 import image11 from "../src/assets/images/11.png";
+import image12 from "../src/assets/images/12.png";
 import github from "../src/assets/icons/github.png";
 import react from "../src/assets/icons/react.png";
 import mui from "../src/assets/icons/mui.png";
@@ -40,7 +37,6 @@ const App = () => {
 
   return (
     <>
-      <LocalizationProvider dateAdapter={AdapterDayjs}>
         <Element name="home">
           <Navbar isMobile={isMobile} />
         </Element>
@@ -51,14 +47,10 @@ const App = () => {
         <Element name="designs">
           <DesignContainer isMobile={isMobile} />
         </Element>
-        {/* <Element name="skills">
-          <SkillsContainer isMobile={isMobile} />
-        </Element> */}
         <Element name="contact">
           <ContactContainer isMobile={isMobile} />
         </Element>
         <Bottombar isMobile={isMobile} />
-      </LocalizationProvider>
     </>
   );
 };
@@ -89,9 +81,6 @@ const StartContainer = ({ isMobile }) => {
       opacityTransitionTime: 3000,
     },
   };
-
-
-
 
   return (
     <MainContainer height={"684px"}>
@@ -161,14 +150,14 @@ const StartContainer = ({ isMobile }) => {
               borderRadius: 2,
               px: "3rem",
               py: "1rem",
-              ":hover":{
+              ":hover": {
                 background:
-                "linear-gradient(to bottom," +
-                theme.palette.customTeal[400] +
-                "," +
-                theme.palette.customTeal[600] +
-                ")",
-              }
+                  "linear-gradient(to bottom," +
+                  theme.palette.customTeal[400] +
+                  "," +
+                  theme.palette.customTeal[600] +
+                  ")",
+              },
             }}
           >
             <Typography variant="subtitle1">Contact via e-mail </Typography>
@@ -186,9 +175,7 @@ const StartContainer = ({ isMobile }) => {
             borderBottomLeftRadius: "15px",
             zIndex: 1,
           }}
-        >
-          {/* <Calendar /> */}
-        </Box>
+        ></Box>
       </Box>
     </MainContainer>
   );
@@ -198,6 +185,12 @@ const DemosContainer = ({ isMobile }) => {
   const theme = useTheme();
 
   const items = [
+    {
+      title: "PRODENT dental services website project",
+      text: "Website project dental services.",
+      image: image12,
+      link: "https://princ3-web.github.io/8/",
+    },
     {
       title: "Marvel's Spider-Man official website project",
       text: "Website project for PS5 and PC game.",
@@ -227,18 +220,6 @@ const DemosContainer = ({ isMobile }) => {
       text: "Precise clone of popular digital distribution website.",
       image: image0,
       link: "https://princ3-web.github.io/steamclone/",
-    },
-    {
-      title: "Design software",
-      text: "A design software website with intuitive navigation and an aesthetically pleasing interface.",
-      image: image1,
-      link: "https://princ3-web.github.io/designstudio/",
-    },
-    {
-      title: "Tik-tok style app",
-      text: "TikTok-style app with a captivating design and seamless user interactions.",
-      image: image3,
-      link: "https://princ3-web.github.io/quicktok/",
     },
   ];
 
@@ -270,13 +251,11 @@ const DemosContainer = ({ isMobile }) => {
           }}
         >
           <Box>
-            <Typography sx={{ color: "gold", fontWeight: 600, mb: 1 }}>
-              Website projects
-            </Typography>
+            <Typography sx={{ color: "gold", fontWeight: 600, mb: 1 }}>Website projects</Typography>
             <Typography variant="h4" sx={{ color: grey[100], fontWeight: 600 }}>
               Check my website projects
             </Typography>
-      
+
             <Typography sx={{ color: grey[400], fontWeight: 400, mt: 2 }}>
               Here is my collection of websites projects.
             </Typography>
@@ -313,10 +292,14 @@ const DemosContainer = ({ isMobile }) => {
                       alignItems: "center",
                       width: "100%",
                       height: "100%",
-                      backgroundColor: teal[600],
-                      background: "linear-gradient(" + teal[900] + "," + teal[600] + ")",
+                      background:
+                      "linear-gradient(" +
+                      theme.palette.customTeal[600] +
+                      "," +
+                      theme.palette.customTeal[900] +
+                      ")",
                       filter: "opacity(0)",
-                      transition: "0.2s",
+                      transition: "0.5s",
                       "&:hover": {
                         filter: "opacity(0.9)",
                       },
@@ -398,13 +381,11 @@ const DesignContainer = ({ isMobile }) => {
           }}
         >
           <Box>
-            <Typography sx={{ color: "gold", fontWeight: 600, mb: 1 }}>
-              Visual projects
-            </Typography>
+            <Typography sx={{ color: "gold", fontWeight: 600, mb: 1 }}>Visual projects</Typography>
             <Typography variant="h4" sx={{ color: grey[100], fontWeight: 600 }}>
               Check my visual projects
             </Typography>
-          
+
             <Typography sx={{ color: grey[400], fontWeight: 400, mt: 2 }}>
               Here is my collection of visual projects for websites.
             </Typography>
@@ -425,7 +406,7 @@ const DesignContainer = ({ isMobile }) => {
                   sx={{
                     position: "relative",
                     width: "30%",
-                    height: "350px",
+                    height: "300px",
                     overflow: "hidden",
                     m: "1.065%",
                     transition: "0.5s",
@@ -434,21 +415,25 @@ const DesignContainer = ({ isMobile }) => {
                   }}
                 >
                   <Box
-                    sx={{
-                      position: "absolute",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      width: "100%",
-                      height: "100%",
-                      backgroundColor: teal[600],
-                      background: "linear-gradient(" + teal[900] + "," + teal[600] + ")",
-                      filter: "opacity(0)",
-                      transition: "0.2s",
-                      "&:hover": {
-                        filter: "opacity(0.9)",
-                      },
-                    }}
+                        sx={{
+                          position: "absolute",
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "center",
+                          width: "100%",
+                          height: "100%",
+                          background:
+                          "linear-gradient(" +
+                          theme.palette.customTeal[600] +
+                          "," +
+                          theme.palette.customTeal[900] +
+                          ")",
+                          filter: "opacity(0)",
+                          transition: "0.5s",
+                          "&:hover": {
+                            filter: "opacity(0.9)",
+                          },
+                        }}
                   >
                     <Box sx={{ width: "80%" }}>
                       <Typography variant="h5" sx={{ color: "white" }}>
@@ -544,10 +529,7 @@ const SkillsContainer = ({ isMobile }) => {
             </Typography>
           </Box>
           <Box>
-            <Typography
-              variant="h5"
-              sx={{ color: grey[400], fontWeight: 600, mb: 1, mt: 3 }}
-            >
+            <Typography variant="h5" sx={{ color: grey[400], fontWeight: 600, mb: 1, mt: 3 }}>
               Skills
             </Typography>
             <Box sx={{ display: "flex", flexWrap: "wrap" }}>
@@ -681,9 +663,7 @@ const ContactContainer = ({ isMobile }) => {
             width: isMobile ? "100vw" : "50vw",
           }}
         >
-          <Typography sx={{ color: "gold", fontWeight: 600, mb: 1 }}>
-            Start now
-          </Typography>
+          <Typography sx={{ color: "gold", fontWeight: 600, mb: 1 }}>Start now</Typography>
           <Typography variant="h4" sx={{ color: grey[200], fontWeight: 600 }}>
             Ship your new project
           </Typography>
@@ -708,14 +688,14 @@ const ContactContainer = ({ isMobile }) => {
               borderRadius: 2,
               px: "3rem",
               py: "1rem",
-              ":hover":{
+              ":hover": {
                 background:
-                "linear-gradient(to bottom," +
-                theme.palette.customTeal[400] +
-                "," +
-                theme.palette.customTeal[600] +
-                ")",
-              }
+                  "linear-gradient(to bottom," +
+                  theme.palette.customTeal[400] +
+                  "," +
+                  theme.palette.customTeal[600] +
+                  ")",
+              },
             }}
           >
             <Typography variant="subtitle1">Contact via e-mail </Typography>
