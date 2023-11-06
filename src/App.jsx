@@ -5,11 +5,9 @@ import Bottombar from "./components/Bottombar";
 import MainContainer from "./components/MainContainer";
 import { Typography, Box, Button } from "@mui/material";
 import { grey, blueGrey, teal, blue } from "@mui/material/colors";
-
 import { useTheme } from "@mui/material";
 import { CardMedia } from "@mui/material";
 import image0 from "../src/assets/images/0.png";
-
 import image4 from "../src/assets/images/4.png";
 import image5 from "../src/assets/images/5.png";
 import image6 from "../src/assets/images/6.png";
@@ -31,26 +29,30 @@ import { Link } from "@mui/material";
 import { Element } from "react-scroll";
 import ParticleBackground from "react-particle-backgrounds";
 import Animated from "./components/Animated";
+import MessengerWidget from "./components/MessengerWidget";
+
 
 const App = () => {
   const isMobile = useMediaQuery("(max-width: 700px)");
 
   return (
     <>
-        <Element name="home">
-          <Navbar isMobile={isMobile} />
-        </Element>
-        <StartContainer isMobile={isMobile} />
-        <Element name="projects">
-          <DemosContainer isMobile={isMobile} />
-        </Element>
-        <Element name="designs">
-          <DesignContainer isMobile={isMobile} />
-        </Element>
-        <Element name="contact">
-          <ContactContainer isMobile={isMobile} />
-        </Element>
-        <Bottombar isMobile={isMobile} />
+      <Element name="home">
+        <Navbar isMobile={isMobile} />
+      </Element>
+      <MessengerWidget/>
+      <StartContainer isMobile={isMobile} />
+      <Element name="projects">
+        <DemosContainer isMobile={isMobile} />
+      </Element>
+      <Element name="designs">
+        <DesignContainer isMobile={isMobile} />
+      </Element>
+      <Element name="contact">
+        <ContactContainer isMobile={isMobile} />
+      </Element>
+
+      <Bottombar isMobile={isMobile} />
     </>
   );
 };
@@ -293,11 +295,11 @@ const DemosContainer = ({ isMobile }) => {
                       width: "100%",
                       height: "100%",
                       background:
-                      "linear-gradient(" +
-                      theme.palette.customTeal[600] +
-                      "," +
-                      theme.palette.customTeal[900] +
-                      ")",
+                        "linear-gradient(" +
+                        theme.palette.customTeal[600] +
+                        "," +
+                        theme.palette.customTeal[900] +
+                        ")",
                       filter: "opacity(0)",
                       transition: "0.5s",
                       "&:hover": {
@@ -415,25 +417,25 @@ const DesignContainer = ({ isMobile }) => {
                   }}
                 >
                   <Box
-                        sx={{
-                          position: "absolute",
-                          display: "flex",
-                          justifyContent: "center",
-                          alignItems: "center",
-                          width: "100%",
-                          height: "100%",
-                          background:
-                          "linear-gradient(" +
-                          theme.palette.customTeal[600] +
-                          "," +
-                          theme.palette.customTeal[900] +
-                          ")",
-                          filter: "opacity(0)",
-                          transition: "0.5s",
-                          "&:hover": {
-                            filter: "opacity(0.9)",
-                          },
-                        }}
+                    sx={{
+                      position: "absolute",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      width: "100%",
+                      height: "100%",
+                      background:
+                        "linear-gradient(" +
+                        theme.palette.customTeal[600] +
+                        "," +
+                        theme.palette.customTeal[900] +
+                        ")",
+                      filter: "opacity(0)",
+                      transition: "0.5s",
+                      "&:hover": {
+                        filter: "opacity(0.9)",
+                      },
+                    }}
                   >
                     <Box sx={{ width: "80%" }}>
                       <Typography variant="h5" sx={{ color: "white" }}>
