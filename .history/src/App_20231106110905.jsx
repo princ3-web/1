@@ -31,6 +31,7 @@ import ParticleBackground from "react-particle-backgrounds";
 import Animated from "./components/Animated";
 import MessengerWidget from "./components/MessengerWidget";
 
+
 const App = () => {
   const isMobile = useMediaQuery("(max-width: 700px)");
 
@@ -39,7 +40,7 @@ const App = () => {
       <Element name="home">
         <Navbar isMobile={isMobile} />
       </Element>
-      <MessengerWidget />
+      <MessengerWidget/>
       <StartContainer isMobile={isMobile} />
       <Element name="projects">
         <DemosContainer isMobile={isMobile} />
@@ -135,7 +136,7 @@ const StartContainer = ({ isMobile }) => {
             - Prices start at 1499 PLN, with a 20% discount for first-time clients!
           </Typography>
           <Typography color={grey[200]} sx={{ mt: "12px" }}>
-            - Contact us via chat on website or e-mail!
+            - Contact us via
           </Typography>
 
           <Button
