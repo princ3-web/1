@@ -159,7 +159,7 @@ const StartContainer = ({ isMobile, lang }) => {
                 - Zwiększona widoczność strony, przyciągająca więcej ruchu od klientów
               </Typography>
               <Typography color={grey[200]} sx={{ mt: "12px" }}>
-                - Ceny projektów już od 1399 PLN, z 20% rabatem dla nowych klientów!
+                - Ceny projektów już od 1499 PLN, z 20% rabatem dla nowych klientów!
               </Typography>
               <Typography color={grey[200]} sx={{ mt: "12px" }}>
                 - Skontaktuj się z nami przez czat na stronie lub e-mail!

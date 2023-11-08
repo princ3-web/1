@@ -116,22 +116,19 @@ const StartContainer = ({ isMobile, lang }) => {
           </Typography>
           {lang ? (
             <Typography color={"gold"} sx={{ mt: "22px" }}>
-              Do you need a new website that will be an attractive showcase for your company? Do you
-              want your website to function smoothly and stand out from the competition? Do you need
-              a landing page, an e-commerce site for your store, or a more advanced website? Write
-              to us!
+              Do you want a website that will meet your business goals? Your website should function
+              swiftly and stand out from your competition? That's exactly the kind of websites I
+              design.
             </Typography>
           ) : (
-            <Typography color={"gold"} sx={{ fontSize: "18px", mt: "22px", textIndent: "25px" }}>
-              Potrzebujesz nowej strony internetowej która będzie atrakcyjną wizytówką dla Twojej
-              firmy? Chcesz aby Twoja strona działała sprawnie i wyróżniała się na tle konkurencji?
-              Potrzebujesz landing page, strony e-commerce dla sklepu, lub bardziej zaawansowanej
-              strony? Napisz do nas!
+            <Typography color={"gold"} sx={{ mt: "22px" }}>
+              Potrzebujesz nowej strony internetowej będącej wizytówką Twojej firmy? Chcesz aby Twoja
+              strona działała sprawnie i wyróżniała się na tle konkurencji? Potrzebujesz landing page, strony e-commerce dla sklepu, lub bardziej zaawansowanej
             </Typography>
           )}
           {lang ? (
             <>
-              <Typography color={grey[200]} sx={{ mt: "22px", fontSize: "12px" }}>
+              <Typography color={grey[200]} sx={{ mt: "22px" }}>
                 - Lighting fast both on computers and phones
               </Typography>
               <Typography color={grey[200]} sx={{ mt: "12px" }}>
@@ -159,7 +156,7 @@ const StartContainer = ({ isMobile, lang }) => {
                 - Zwiększona widoczność strony, przyciągająca więcej ruchu od klientów
               </Typography>
               <Typography color={grey[200]} sx={{ mt: "12px" }}>
-                - Ceny projektów już od 1399 PLN, z 20% rabatem dla nowych klientów!
+                - Ceny projektów już od 1299 PLN, z 20% rabatem dla nowych klientów!
               </Typography>
               <Typography color={grey[200]} sx={{ mt: "12px" }}>
                 - Skontaktuj się z nami przez czat na stronie lub e-mail!
