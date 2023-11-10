@@ -81,7 +81,7 @@ const StartContainer = ({ isMobile, lang }) => {
   };
 
   return (
-    <MainContainer height={isMobile ? "auto" :"93vh"}>
+    <MainContainer height={isMobile ? "auto" :"90vh"}>
       <Box
         sx={{
           display: "flex",
@@ -183,7 +183,6 @@ const StartContainer = ({ isMobile, lang }) => {
               borderRadius: 2,
               px: "3rem",
               py: "1rem",
-              mb:"2rem",
               ":hover": {
                 background:
                   "linear-gradient(to bottom," +

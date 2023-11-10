@@ -81,13 +81,13 @@ const StartContainer = ({ isMobile, lang }) => {
   };
 
   return (
-    <MainContainer height={isMobile ? "auto" :"93vh"}>
+    <MainContainer height={"auto"}>
       <Box
         sx={{
+          position:"relative",
           display: "flex",
           justifyContent: "flex-start",
           position: "relative",
-          height:"100%",
           backgroundColor: theme.palette.customTeal[800],
           background:
             "linear-gradient(" +
