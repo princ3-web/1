@@ -330,15 +330,16 @@ const DemosContainer = ({ isMobile, lang }) => {
                 href={item.link}
                 sx={{
                   position: "relative",
+
                   overflow: "hidden",
                   m: "1%",
                   transition: "0.5s",
                   // transform: n % 3 === 1 && "scale(1.0) translate(0%, 15%)",
                   cursor: "pointer",
-                  width: isMobile ? "98%" : "42%",
+                  width: "99%",
                 }}
               >
-                <Animated style={{ position: "relative", width: "100%", height: isMobile ? "250px" : "500px" }}>
+                <Animated style={{ position: "relative", width: "100%", height: "800px" }}>
                   <Box
                     sx={{
                       position: "absolute",

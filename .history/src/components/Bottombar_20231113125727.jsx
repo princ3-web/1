@@ -19,10 +19,10 @@ const Bottombar = ({ isMobile }) => {
       }}
     >
       <Box sx={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
-        <Typography sx={{ color: grey[100], fontSize: 14, fontWeight: 900 }}>
+        <Typography sx={{ color: grey[400], fontSize: 14, fontWeight: 900 }}>
           tel: 662 047 277
         </Typography>
-        <Link href={"mailto:gornmich@gmail.com"} sx={{ textDecoration: "none", color: grey[100] }}>
+        <Link href={"mailto:gornmich@gmail.com"} sx={{ textDecoration: "none", color: grey[200] }}>
           <Typography sx={{ fontSize: 14, fontWeight: 900 }}>e-mail: gornmich@gmail.com</Typography>
         </Link>
       </Box>

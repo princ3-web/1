@@ -338,7 +338,7 @@ const DemosContainer = ({ isMobile, lang }) => {
                   width: isMobile ? "98%" : "42%",
                 }}
               >
-                <Animated style={{ position: "relative", width: "100%", height: isMobile ? "250px" : "500px" }}>
+                <Animated style={{ position: "relative", width: "100%", height: isMobile ? "3" : "500px" }}>
                   <Box
                     sx={{
                       position: "absolute",

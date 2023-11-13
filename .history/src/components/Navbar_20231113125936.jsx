@@ -9,8 +9,8 @@ import { Link as ScrollLink } from "react-scroll";
 const Navbar = ({ isMobile, lang, toggleLang }) => {
   const theme = useTheme();
 
-  const itemsEn = ["home", "projects", "contact", "about me"];
-  const itemsPl = ["start", "projekty", "kontakt", "o mnie"];
+  const itemsEn = ["home", "projects", "contact", "o mni"];
+  const itemsPl = ["start", "projekty", "kontakt", "więcej"];
 
   return (
     <>

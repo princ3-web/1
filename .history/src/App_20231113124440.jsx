@@ -115,7 +115,7 @@ const StartContainer = ({ isMobile, lang }) => {
             pixel wizard
           </Typography>
           {lang ? (
-            <Typography color={"gold"} sx={{ fontSize: "18px", mt: "22px", textIndent: "25px" }}>
+            <Typography color={"gold"} sx={{ mt: "22px" }}>
               Do you need a new website that will be an attractive showcase for your company? Do you
               want your website to function smoothly and stand out from the competition? Do you need
               a landing page, an e-commerce site for your store, or a more advanced website? Write
@@ -131,7 +131,7 @@ const StartContainer = ({ isMobile, lang }) => {
           )}
           {lang ? (
             <>
-              <Typography color={grey[200]} sx={{ mt: "22px" }}>
+              <Typography color={grey[200]} sx={{ mt: "22px", fontSize: "12px" }}>
                 - Lighting fast both on computers and phones
               </Typography>
               <Typography color={grey[200]} sx={{ mt: "12px" }}>
@@ -330,15 +330,16 @@ const DemosContainer = ({ isMobile, lang }) => {
                 href={item.link}
                 sx={{
                   position: "relative",
+
                   overflow: "hidden",
-                  m: "1%",
+                  m: "1.065%",
                   transition: "0.5s",
                   // transform: n % 3 === 1 && "scale(1.0) translate(0%, 15%)",
                   cursor: "pointer",
-                  width: isMobile ? "98%" : "42%",
+                  width: "48%",
                 }}
               >
-                <Animated style={{ position: "relative", width: "100%", height: isMobile ? "250px" : "500px" }}>
+                <Animated style={{ position: "relative", width: "100%", height: "300px" }}>
                   <Box
                     sx={{
                       position: "absolute",

@@ -10,7 +10,7 @@ const Navbar = ({ isMobile, lang, toggleLang }) => {
   const theme = useTheme();
 
   const itemsEn = ["home", "projects", "contact", "about me"];
-  const itemsPl = ["start", "projekty", "kontakt", "o mnie"];
+  const itemsPl = ["start", "projekty", "kontakt", "o "];
 
   return (
     <>
