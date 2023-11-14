@@ -77,13 +77,13 @@ const StartContainer = ({ isMobile, lang }) => {
   };
 
   return (
-    <MainContainer height={isMobile ? "auto" : "93vh"}>
+    <MainContainer height={isMobile ? "auto" :"93vh"}>
       <Box
         sx={{
           display: "flex",
           justifyContent: "flex-start",
           position: "relative",
-          height: "100%",
+          height:"100%",
           backgroundColor: theme.palette.customTeal[800],
           background:
             "linear-gradient(" +
@@ -179,7 +179,7 @@ const StartContainer = ({ isMobile, lang }) => {
               borderRadius: 2,
               px: "3rem",
               py: "1rem",
-              mb: "2rem",
+              mb:"2rem",
               ":hover": {
                 background:
                   "linear-gradient(to bottom," +
@@ -334,13 +334,7 @@ const DemosContainer = ({ isMobile, lang }) => {
                   width: isMobile ? "98%" : "42%",
                 }}
               >
-                <Animated
-                  style={{
-                    position: "relative",
-                    width: "100%",
-                    height: isMobile ? "250px" : "500px",
-                  }}
-                >
+                <Animated style={{ position: "relative", width: "100%", height: isMobile ? "250px" : "500px" }}>
                   <Box
                     sx={{
                       position: "absolute",

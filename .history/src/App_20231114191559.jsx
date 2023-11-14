@@ -77,13 +77,13 @@ const StartContainer = ({ isMobile, lang }) => {
   };
 
   return (
-    <MainContainer height={isMobile ? "auto" : "93vh"}>
+    <MainContainer height={isMobile ? "auto" :"93vh"}>
       <Box
         sx={{
           display: "flex",
           justifyContent: "flex-start",
           position: "relative",
-          height: "100%",
+          height:"100%",
           backgroundColor: theme.palette.customTeal[800],
           background:
             "linear-gradient(" +
@@ -179,7 +179,7 @@ const StartContainer = ({ isMobile, lang }) => {
               borderRadius: 2,
               px: "3rem",
               py: "1rem",
-              mb: "2rem",
+              mb:"2rem",
               ":hover": {
                 background:
                   "linear-gradient(to bottom," +
@@ -334,13 +334,7 @@ const DemosContainer = ({ isMobile, lang }) => {
                   width: isMobile ? "98%" : "42%",
                 }}
               >
-                <Animated
-                  style={{
-                    position: "relative",
-                    width: "100%",
-                    height: isMobile ? "250px" : "500px",
-                  }}
-                >
+                <Animated style={{ position: "relative", width: "100%", height: isMobile ? "250px" : "500px" }}>
                   <Box
                     sx={{
                       position: "absolute",
@@ -383,32 +377,32 @@ const DemosContainer = ({ isMobile, lang }) => {
 const DesignContainer = ({ isMobile }) => {
   const theme = useTheme();
 
-  // const items = [
-  //   {
-  //     title: "Dead Cells",
-  //     text: "Design for indie game official website",
-  //     image: image4,
-  //     link: "https://i.ibb.co/mc4TzzH/4.png",
-  //   },
-  //   {
-  //     title: "Dental Clinic",
-  //     text: "A dental clinic website design project.",
-  //     image: image5,
-  //     link: "https://i.ibb.co/XLGS18z/1080.png",
-  //   },
-  //   {
-  //     title: "Dental Clinic II",
-  //     text: "Second dental clinic website design project.",
-  //     image: image6,
-  //     link: "https://i.ibb.co/XtzQrxx/1080.png",
-  //   },
-  //   {
-  //     title: "Mental Therapy",
-  //     text: "A mental therapy website design project.",
-  //     image: image7,
-  //     link: "https://i.ibb.co/ch8SLfr/1440.png",
-  //   },
-  // ];
+  const items = [
+    {
+      title: "Dead Cells",
+      text: "Design for indie game official website",
+      image: image4,
+      link: "https://i.ibb.co/mc4TzzH/4.png",
+    },
+    {
+      title: "Dental Clinic",
+      text: "A dental clinic website design project.",
+      image: image5,
+      link: "https://i.ibb.co/XLGS18z/1080.png",
+    },
+    {
+      title: "Dental Clinic II",
+      text: "Second dental clinic website design project.",
+      image: image6,
+      link: "https://i.ibb.co/XtzQrxx/1080.png",
+    },
+    {
+      title: "Mental Therapy",
+      text: "A mental therapy website design project.",
+      image: image7,
+      link: "https://i.ibb.co/ch8SLfr/1440.png",
+    },
+  ];
 
   return (
     <MainContainer height={isMobile ? "auto" : "auto"}>
